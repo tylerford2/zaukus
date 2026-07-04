@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />`n    <link rel="preconnect" href="https://fonts.googleapis.com" />`n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />`n    <link`n      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"`n      rel="stylesheet"`n    />
+    <title>Middle Tennessee Service Area | Zaukus Mobile Detailing</title>
+    <meta name="description" content="Discover the Middle Tennessee service areas covered by Zaukus Mobile Detailing." />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles-overrides.css" />
+  </head>
+  <body>
+        <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html" aria-label="Zaukus Mobile Detailing home">
+          <img src="media/Transparent Logo.png" alt="Zaukus Mobile Detailing - Professional Auto Detailing" class="logo" />
+        </a>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" aria-expanded="false">Services</button>
+            <div class="nav-dropdown-menu">
+              <a href="services.html">All Services</a>
+              <a href="services-detailing.html">Detailing</a>
+              <a href="services-paint-correction.html">Paint Correction</a>
+              <a href="services-ceramic-coating.html">Ceramic Coating</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-toggle" aria-expanded="false">Locations</button>
+            <div class="nav-dropdown-menu">
+              <a href="location-brentwood.html">Brentwood</a>
+              <a href="location-franklin.html">Franklin</a>
+              <a href="location-nolensville.html">Nolensville</a>
+              <a href="location-smyrna.html">Smyrna</a>
+              <a href="location-la-vergne.html">La Vergne</a>
+              <a href="location-lebanon.html">Lebanon</a>
+              <a href="location-mt-juliet.html">Mt. Juliet</a>
+              <a href="location-murfreesboro.html">Murfreesboro</a>
+              <a href="location-forest-hills.html">Forest Hills</a>
+              <a href="location-belle-meade.html">Belle Meade</a>
+              <a href="location-donelson.html">Donelson</a>
+              <a href="location-bellevue.html">Bellevue</a>
+              <a href="location-antioch.html">Antioch</a>
+              <a href="location-east-nashville.html">East Nashville</a>
+            </div>
+          </div>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button type="button" class="cta-phone booking-trigger" data-open-booking>
+          <svg class="phone-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="4" y="5" width="16" height="14" rx="2"></rect>
+            <path d="M8 9h8"></path>
+            <path d="M8 13h5"></path>
+          </svg>
+          Book Now
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <span class="eyebrow">Middle Tennessee</span>
+          <h1>Serving drivers across Middle Tennessee with premium mobile detailing.</h1>
+          <p>From La Vergne to nearby communities, weâ€™re proud to bring professional care directly to our clients throughout the region.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="service-card">
+            <h2>Expanded service area</h2>
+            <p>We provide mobile detailing and paint protection services throughout the greater Nashville area and surrounding regions, including communities within about 1.5 hours of ZIP code 37086.</p>
+            <ul class="about-features">
+              <li>East Nashville</li>
+              <li>La Vergne</li>
+              <li>Antioch</li>
+              <li>Bellevue</li>
+              <li>Nashville</li>
+              <li>Donelson</li>
+              <li>Belle Meade</li>
+              <li>Forest Hills</li>
+              <li>Murfreesboro</li>
+              <li>Smyrna</li>
+              <li>Brentwood</li>
+              <li>Franklin</li>
+              <li>Nolensville</li>
+              <li>Lebanon</li>
+              <li>Mt. Juliet</li>
+            </ul>
+            <p>If youâ€™re outside this list, reach out to confirm availability for your area within the surrounding 1.5-hour travel radius.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="booking-modal" id="bookingModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+      <div class="booking-modal__backdrop" data-close-booking></div>
+      <div class="booking-modal__panel">
+        <div class="booking-modal__header">
+          <div>
+            <p class="eyebrow">Book your appointment</p>
+            <h2 id="bookingModalTitle">Schedule your detail</h2>
+          </div>
+          <button type="button" class="booking-modal__close" aria-label="Close booking window" data-close-booking>Ã—</button>
+        </div>
+        <iframe src="https://zaukusmobiledetailing.fieldd.co" title="Zaukus Mobile Detailing booking form" loading="lazy"></iframe>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
