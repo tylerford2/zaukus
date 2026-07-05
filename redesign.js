@@ -70,7 +70,7 @@
       });
 
       dropdown.addEventListener('mouseenter', () => {
-        if (window.innerWidth > 720) {
+        if (window.innerWidth > 860) {
           openDropdown(dropdown, toggle);
         }
       });
@@ -87,6 +87,13 @@
       if (!(target instanceof Element)) return;
       if (!siteNav.contains(target) && target !== navToggle) {
         closeMobileNav();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 860) {
+        siteNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
@@ -150,7 +157,7 @@
 
     startAutoPlay() {
       this.stopAutoPlay();
-      this.autoPlayInterval = window.setInterval(() => this.next(), 5000);
+      this.autoPlayInterval = window.setInterval(() => this.next(), 5500);
     }
 
     stopAutoPlay() {
@@ -192,7 +199,7 @@
       if (contactForm.getAttribute('netlify')) {
         contactForm.submit();
       } else {
-        alert('Thank you for your inquiry! We\'ll get back to you soon.');
+        alert('Thank you for your inquiry. We will get back to you soon.');
         contactForm.reset();
       }
     });
@@ -251,33 +258,17 @@
   });
 
   if ('IntersectionObserver' in window) {
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-    `;
-    document.head.appendChild(style);
-
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          entry.target.style.animation = 'fadeInUp 600ms ease forwards';
+          entry.target.classList.add('is-visible');
           obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.service-card, .benefit-item, .faq-item, .step').forEach((element) => {
-      element.style.opacity = '0';
-      element.style.animation = 'none';
+    document.querySelectorAll('.service-card, .benefit-item, .faq-item, .step, .seo-card, .trust-item').forEach((element) => {
+      element.classList.add('reveal-item');
       observer.observe(element);
     });
   }
