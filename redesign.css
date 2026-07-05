@@ -392,6 +392,16 @@ p {
   background: rgba(255, 255, 255, 0.08);
 }
 
+.btn-outline {
+  border: 1px solid var(--brand);
+  color: var(--brand-deep);
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: rgba(207, 93, 31, 0.08);
+}
+
 .hero-badges,
 .hero-highlights {
   display: flex;
@@ -571,6 +581,86 @@ p {
   color: var(--accent);
   font-weight: 700;
   cursor: pointer;
+}
+
+.promise-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  background: linear-gradient(135deg, var(--ink), #2b2016);
+  border-radius: var(--radius);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  color: #fff;
+}
+
+.promise-copy h2 {
+  color: #fff;
+}
+
+.promise-copy > p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.promise-points {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.promise-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 1.1rem 1.3rem;
+}
+
+.promise-card h3 {
+  color: #fff;
+  margin-bottom: 0.35rem;
+  font-size: 1.05rem;
+}
+
+.promise-card p {
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0;
+}
+
+.promise-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.promise-quote {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 1.5rem;
+}
+
+.promise-quote p {
+  font-size: 1.15rem;
+  font-style: italic;
+  color: #fff;
+  margin: 0 0 0.6rem;
+}
+
+.promise-quote span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.promise-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+@media (max-width: 860px) {
+  .promise-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .page-hero {

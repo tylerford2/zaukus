@@ -107,6 +107,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="redesign.css" />
+    <script type="text/javascript" src="https://d3vun76hlrxgjr.cloudfront.net"></script>
+    <script>window.FielddBooking.init('5Hx4Xp');</script>
 </head>
   <body>
     <!-- Skip to Content Link for Accessibility -->
@@ -150,6 +152,8 @@
               <a href="location-bellevue.html">Bellevue</a>
               <a href="location-antioch.html">Antioch</a>
               <a href="location-east-nashville.html">East Nashville</a>
+              <a href="location-nashville.html">Nashville</a>
+              <a href="location-middle-tennessee.html">Middle Tennessee</a>
             </div>
           </div>
           <a href="about.html">About</a>
@@ -203,7 +207,7 @@
               <span>Ceramic Coating</span>
             </div>
             <ul class="hero-highlights">
-              <li>Mobile concierge service</li>
+              <li>Service at your location</li>
               <li>Paint-safe correction</li>
               <li>Hydrophobic ceramic protection</li>
               <li>Trusted local craftsmanship</li>
@@ -225,7 +229,7 @@
           </div>
           <div class="trust-item">
             <strong>Experience</strong>
-            <span>Professional results with concierge-level care</span>
+            <span>Professional results with meticulous attention to detail</span>
           </div>
         </div>
       </section>
@@ -488,43 +492,16 @@
         </div>
       </section>
 
-      <!-- Testimonials Section -->
+      <!-- Reviews Section -->
       <section class="section testimonials-section">
         <div class="container">
           <div class="section-heading">
-            <span class="eyebrow">Client Testimonials</span>
-            <h2>What our clients say</h2>
-          </div>
-
-          <div class="testimonials-carousel">
-            <div class="testimonial-slide active">
-              <div class="testimonial-card">
-                <div class="star-rating">★★★★★</div>
-                <p class="testimonial-text">"Zaukus did an exceptional job with my vehicle. The attention to detail is unmatched, and my car looks brand new. Highly recommend!"</p>
-                <p class="testimonial-author">- Jason M., La Vergne</p>
-              </div>
-            </div>
-            <div class="testimonial-slide">
-              <div class="testimonial-card">
-                <div class="star-rating">★★★★★</div>
-                <p class="testimonial-text">"Professional, courteous, and delivers amazing results. This is the only detail service I'll use. Worth every penny."</p>
-                <p class="testimonial-author">- Sarah T., Nashville</p>
-              </div>
-            </div>
-            <div class="testimonial-slide">
-              <div class="testimonial-card">
-                <div class="star-rating">★★★★★</div>
-                <p class="testimonial-text">"The ceramic coating has kept my car looking showroom-fresh months later. Incredible service and knowledge!"</p>
-                <p class="testimonial-author">- Mike R., Middle Tennessee</p>
-              </div>
-            </div>
-            <button class="carousel-nav carousel-prev" aria-label="Previous testimonial">‹</button>
-            <button class="carousel-nav carousel-next" aria-label="Next testimonial">›</button>
-            <div class="carousel-dots">
-              <button class="dot active" aria-label="Go to testimonial 1"></button>
-              <button class="dot" aria-label="Go to testimonial 2"></button>
-              <button class="dot" aria-label="Go to testimonial 3"></button>
-            </div>
+            <span class="eyebrow">Client Reviews</span>
+            <h2>See what customers are saying on Google</h2>
+            <p>Read verified reviews from real Zaukus Mobile Detailing customers on our Google Business Profile.</p>
+            <a href="https://maps.app.goo.gl/dmQ99wbgu2x5oAWK7" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <span aria-hidden="true">★★★★★</span> Read Our Reviews on Google
+            </a>
           </div>
         </div>
       </section>
@@ -540,50 +517,9 @@
 
           <div class="contact-wrapper">
             <!-- Contact Form -->
-            <form class="contact-form" name="zaukus-contact" method="POST" netlify>
-              <div class="form-group">
-                <label for="name">Full Name *</label>
-                <input type="text" id="name" name="name" required aria-required="true" placeholder="Your name" />
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email Address *</label>
-                <input type="email" id="email" name="email" required aria-required="true" placeholder="your@email.com" />
-              </div>
-
-              <div class="form-group">
-                <label for="phone">Phone Number *</label>
-                <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="(615) 000-0000" />
-              </div>
-
-              <div class="form-group">
-                <label for="vehicle">Vehicle Year/Make/Model *</label>
-                <input type="text" id="vehicle" name="vehicle" required aria-required="true" placeholder="2023 Honda Civic" />
-              </div>
-
-              <div class="form-group">
-                <label for="service">Service Interested In *</label>
-                <select id="service" name="service" required aria-required="true">
-                  <option value="">Select a service</option>
-                  <option value="detailing">Professional Detailing</option>
-                  <option value="paint-correction">Paint Correction</option>
-                  <option value="ceramic-coating">Ceramic Coating</option>
-                  <option value="multiple">Multiple Services</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Tell us more *</label>
-                <textarea id="message" name="message" required aria-required="true" placeholder="Details about your vehicle and service needs..." rows="5"></textarea>
-              </div>
-
-              <div class="form-group checkbox">
-                <input type="checkbox" id="consent" name="consent" required aria-required="true" />
-                <label for="consent">I consent to receive text messages from Zaukus Mobile Detailing. Message and data rates may apply.</label>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-large">Book My Detail</button>
-            </form>
+            <div class="lead-form-wrapper">
+              <fieldd-lead-form code="5Hx4Xp"></fieldd-lead-form>
+            </div>
 
             <!-- Contact Info -->
             <div class="contact-info">
@@ -763,7 +699,8 @@
         </div>
 
         <div class="footer-bottom">
-          <p>&copy; 2024 Zaukus Mobile Detailing. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+          <p>&copy; <span id="year"></span> Zaukus Mobile Detailing. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+          <p><a href="https://zaukusmobiledetailing.fieldd.co" target="_blank" rel="noopener noreferrer">Book online: zaukusmobiledetailing.fieldd.co</a></p>
         </div>
       </div>
     </footer>

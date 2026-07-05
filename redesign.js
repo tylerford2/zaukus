@@ -7,7 +7,6 @@
   const bookingTriggers = document.querySelectorAll('[data-open-booking]');
   const bookingModal = document.getElementById('bookingModal');
   const closeControls = document.querySelectorAll('[data-close-booking]');
-  const contactForm = document.querySelector('.contact-form');
 
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
@@ -171,39 +170,6 @@
   new Carousel('.hero-carousel');
   new Carousel('.gallery-carousel');
   new Carousel('.testimonials-carousel');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      const formData = new FormData(contactForm);
-      const data = Object.fromEntries(formData);
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const phoneRegex = /^[\d\s\-()]+$/;
-
-      if (!data.name || !data.email || !data.phone || !data.vehicle || !data.service || !data.message || !data.consent) {
-        alert('Please fill out all required fields.');
-        return;
-      }
-
-      if (!emailRegex.test(data.email)) {
-        alert('Please enter a valid email address.');
-        return;
-      }
-
-      if (!phoneRegex.test(data.phone) || data.phone.length < 10) {
-        alert('Please enter a valid phone number.');
-        return;
-      }
-
-      if (contactForm.getAttribute('netlify')) {
-        contactForm.submit();
-      } else {
-        alert('Thank you for your inquiry. We will get back to you soon.');
-        contactForm.reset();
-      }
-    });
-  }
 
   const openBookingModal = () => {
     if (!bookingModal) return;
