@@ -1,12 +1,9 @@
 (() => {
-  const body = document.body;
   const navToggle = document.querySelector('.nav-toggle');
   const siteNav = document.querySelector('.site-nav');
   const yearElement = document.getElementById('year');
   const dropdownToggles = document.querySelectorAll('.nav-dropdown-toggle');
   const bookingTriggers = document.querySelectorAll('[data-open-booking]');
-  const bookingModal = document.getElementById('bookingModal');
-  const closeControls = document.querySelectorAll('[data-close-booking]');
 
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
@@ -171,44 +168,12 @@
   new Carousel('.gallery-carousel');
   new Carousel('.testimonials-carousel');
 
-  const openBookingModal = () => {
-    if (!bookingModal) return;
-    bookingModal.classList.add('open');
-    bookingModal.setAttribute('aria-hidden', 'false');
-    body.classList.add('modal-open');
-  };
-
-  const closeBookingModal = () => {
-    if (!bookingModal) return;
-    bookingModal.classList.remove('open');
-    bookingModal.setAttribute('aria-hidden', 'true');
-    body.classList.remove('modal-open');
-  };
-
-  if (bookingModal) {
-    bookingTriggers.forEach((trigger) => {
-      trigger.addEventListener('click', (event) => {
-        event.preventDefault();
-        openBookingModal();
-      });
+  bookingTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.open('https://zaukusmobiledetailing.fieldd.co', '_blank', 'noopener');
     });
-
-    closeControls.forEach((control) => {
-      control.addEventListener('click', closeBookingModal);
-    });
-
-    bookingModal.addEventListener('click', (event) => {
-      if (event.target === bookingModal) {
-        closeBookingModal();
-      }
-    });
-
-    document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && bookingModal.classList.contains('open')) {
-        closeBookingModal();
-      }
-    });
-  }
+  });
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (event) => {
