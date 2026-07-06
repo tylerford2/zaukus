@@ -474,15 +474,30 @@ p {
 
 @media (max-width: 768px) {
   .hero-badges {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+    margin: 1.1rem 0 0.65rem;
   }
 
   .hero-badges a {
-    font-size: 0.85rem;
-    padding: 6px 12px;
+    justify-content: center;
+    text-align: center;
+    padding: 0.5rem 0.4rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin: 0 0 35px;
+  }
+
+  .hero-highlights a {
+    justify-content: center;
+    text-align: center;
   }
 }
 
