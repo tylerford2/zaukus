@@ -353,7 +353,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
   margin-bottom: 0.55rem;
 }
 
@@ -469,6 +469,20 @@ p {
 .hero-highlights a:focus-visible {
   background: rgba(255, 255, 255, 0.22);
   border-color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .hero-badges {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  .hero-badges a {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
 }
 
 .carousel-nav {
@@ -1347,21 +1361,23 @@ fieldd-lead-form {
 
 .coverage-link-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.6rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+  width: 100%;
 }
 
 .coverage-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   text-align: center;
-  padding: 0.7rem 0.8rem;
-  border-radius: 999px;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 8px;
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.6);
-  font-weight: 600;
-  font-size: 0.88rem;
+  background: var(--paper, #fff);
+  box-shadow: var(--shadow-sm);
+  font-weight: 500;
+  font-size: 0.85rem;
   line-height: 1.25;
   color: var(--ink);
   transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease, color 200ms ease, border-color 200ms ease;
@@ -1410,12 +1426,10 @@ fieldd-lead-form {
     max-height: 300px;
   }
 
-  .hero-badges,
   .hero-highlights {
     gap: 0.4rem;
   }
 
-  .hero-badges a,
   .hero-highlights a {
     font-size: 0.78rem;
     padding: 0.4rem 0.65rem;
