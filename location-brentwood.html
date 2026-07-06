@@ -73,9 +73,13 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="redesign.css" />
-    <script type="text/javascript" src="https://fieldd.me/lead-form"></script>
-    <script type="text/javascript" src="https://d3vun76hlrxgjr.cloudfront.net"></script>
-    <script>window.FielddBooking.init('5Hx4Xp');</script>
+    <script type="text/javascript" src="https://fieldd.me/lead-form" defer></script>
+    <script type="text/javascript" src="https://d3vun76hlrxgjr.cloudfront.net" defer></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        window.FielddBooking.init("5Hx4Xp");
+      });
+    </script>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
