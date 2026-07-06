@@ -475,13 +475,13 @@ p {
   .hero-badges {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
+    gap: 10px;
     margin-bottom: 25px;
   }
 
   .hero-badges a {
     font-size: 0.85rem;
-    padding: 6px 14px;
+    padding: 6px 12px;
   }
 }
 
