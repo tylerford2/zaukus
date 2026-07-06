@@ -5,7 +5,7 @@
   --bg-soft: #f3e9d7;
   --paper: #fffdf8;
   --ink: #1f1913;
-  --muted: #645a4f;
+  --muted: #1a1a1a;
   --brand: #cf5d1f;
   --brand-deep: #8f3200;
   --accent: #0f6b66;
@@ -382,7 +382,7 @@ p {
 }
 
 .btn-primary {
-  background: linear-gradient(120deg, #cf5d1f, #ef8f44);
+  background: linear-gradient(120deg, #b3470d, #8f3200);
   color: #fff;
   box-shadow: 0 12px 24px rgba(207, 93, 31, 0.25);
 }
@@ -391,6 +391,17 @@ p {
   border: 1px solid rgba(255, 255, 255, 0.46);
   color: #fff;
   background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-secondary-contrast {
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+  background: rgba(26, 26, 26, 0.03);
+}
+
+.btn-secondary-contrast:hover,
+.btn-secondary-contrast:focus-visible {
+  background: rgba(26, 26, 26, 0.1);
 }
 
 .btn-outline {
