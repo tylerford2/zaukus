@@ -407,7 +407,7 @@ p {
 .btn-secondary {
   border: 1px solid rgba(255, 255, 255, 0.46);
   color: #fff;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .btn-secondary-contrast {
@@ -467,7 +467,7 @@ p {
   display: inline-flex;
   align-items: center;
   border: 1px solid rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(0, 0, 0, 0.4);
   color: #fff;
   border-radius: 999px;
   padding: 0.45rem 0.8rem;
@@ -481,7 +481,7 @@ p {
 .hero-badges a:focus-visible,
 .hero-highlights a:hover,
 .hero-highlights a:focus-visible {
-  background: rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.55);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
