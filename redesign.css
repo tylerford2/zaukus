@@ -183,8 +183,8 @@ img {
   border: 0;
   background: transparent;
   padding: 0.35rem;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
 }
 
 .nav-toggle span {
@@ -324,8 +324,12 @@ main {
   letter-spacing: 0.16em;
   font-size: 0.74rem;
   font-weight: 700;
-  color: #ffd5ac;
+  color: var(--brand-deep);
   margin-bottom: 0.85rem;
+}
+
+.hero-content .eyebrow {
+  color: #ffd5ac;
 }
 
 h1,
@@ -515,8 +519,8 @@ p {
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   border: 0;
   background: rgba(15, 15, 15, 0.45);
@@ -544,15 +548,29 @@ p {
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
   border: 0;
-  background: rgba(255, 255, 255, 0.55);
+  border-radius: 50%;
+  background: transparent;
   cursor: pointer;
 }
 
-.dot.active {
+.dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  transform: translate(-50%, -50%);
+}
+
+.dot.active::after {
   background: #fff;
 }
 
@@ -569,6 +587,8 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  padding: 0.4rem;
+  margin: -0.4rem;
   color: inherit;
   transition: opacity 0.2s ease;
 }
