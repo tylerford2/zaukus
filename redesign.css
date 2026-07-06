@@ -313,6 +313,7 @@ main {
   z-index: 2;
   color: #fff;
   padding-top: clamp(7rem, 12vh, 9rem);
+  padding-bottom: 2.5rem;
   max-width: 740px;
 }
 
