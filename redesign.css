@@ -880,7 +880,7 @@ p {
   background: rgba(255, 255, 255, 0.55);
 }
 
-.package-card h4 {
+.package-card h3 {
   margin-bottom: 0.4rem;
   color: var(--brand-deep);
 }
