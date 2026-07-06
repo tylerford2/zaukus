@@ -578,12 +578,14 @@ p {
   opacity: 0.7;
 }
 
-.footer-social .fab {
-  font-size: 1.25rem;
+.footer-social svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
-.social-icons .fab {
-  font-size: 1.5rem;
+.social-icons svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .site-footer {
