@@ -378,6 +378,7 @@ p {
   padding: 0.82rem 1.25rem;
   font-size: 0.95rem;
   font-weight: 700;
+  color: #1a1a1a;
 }
 
 .btn-primary {
@@ -394,12 +395,24 @@ p {
 
 .btn-outline {
   border: 1px solid var(--brand);
-  color: var(--brand-deep);
+  color: #1a1a1a;
   background: transparent;
 }
 
 .btn-outline:hover {
   background: rgba(207, 93, 31, 0.08);
+}
+
+.google-review-btn {
+  flex-direction: column;
+  gap: 0.2rem;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.google-review-stars {
+  color: #d4af37;
+  letter-spacing: 0.08em;
 }
 
 .hero-badges,
