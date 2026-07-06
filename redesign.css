@@ -439,6 +439,15 @@ p {
   letter-spacing: 0.08em;
 }
 
+.testimonials-widget {
+  max-width: 960px;
+  margin: 0 auto 1.75rem;
+}
+
+.testimonials-cta {
+  text-align: center;
+}
+
 .hero-badges,
 .hero-highlights {
   display: flex;
