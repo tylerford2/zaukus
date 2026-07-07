@@ -81,7 +81,7 @@
     document.addEventListener('click', (event) => {
       const target = event.target;
       if (!(target instanceof Element)) return;
-      if (!siteNav.contains(target) && target !== navToggle) {
+      if (!siteNav.contains(target) && !navToggle.contains(target)) {
         closeMobileNav();
       }
     });
