@@ -134,7 +134,9 @@
     <script type="text/javascript" src="https://d3vun76hlrxgjr.cloudfront.net" defer></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        window.FielddBooking.init("5Hx4Xp");
+        if (window.FielddBooking) {
+          window.FielddBooking.init("5Hx4Xp");
+        }
       });
     </script>
   </head>
