@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7TVR2JKBV"></script>
     <script>
@@ -11,13 +14,15 @@
       gtag('config', 'G-S7TVR2JKBV');
     </script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./media/zaukus-mobile-detailing-logo.png">
+    <link rel="icon" type="image/png" href="./media/favicon.png">
+    <link rel="apple-touch-icon" href="./media/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://fieldd.me" />
+    <link rel="preconnect" href="https://d3vun76hlrxgjr.cloudfront.net" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <title>Middle Tennessee Service Area | Zaukus Mobile Detailing</title>
@@ -36,8 +41,8 @@
     <meta property="og:description" content="Discover mobile detailing, paint correction, and ceramic coating across Middle Tennessee. Zaukus Mobile Detailing brings premium care to your home or office." />
     <meta property="og:site_name" content="Zaukus Mobile Detailing" />
     <meta property="og:image" content="https://www.zaukusmobiledetailing.com/media/zaukus-mobile-detailing-logo.png" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="400" />
+    <meta property="og:image:width" content="1223" />
+    <meta property="og:image:height" content="438" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -81,6 +86,18 @@
         "serviceType": ["Auto Detailing", "Paint Correction", "Ceramic Coating"]
       }
     </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zaukusmobiledetailing.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Middle Tennessee", "item": "https://www.zaukusmobiledetailing.com/location-middle-tennessee.html" }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="redesign.css" />
     <script type="text/javascript" src="https://fieldd.me/lead-form" defer></script>
     <script type="text/javascript" src="https://d3vun76hlrxgjr.cloudfront.net" defer></script>
@@ -97,7 +114,7 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html" aria-label="Zaukus Mobile Detailing home">
-          <img src="media/zaukus-mobile-detailing-logo.png" alt="Zaukus Mobile Detailing - Professional Auto Detailing" class="logo" />
+          <img src="media/zaukus-logo-nav.png" alt="Zaukus Mobile Detailing - Professional Auto Detailing" class="logo" width="402" height="144" />
         </a>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
           <span></span>
@@ -151,10 +168,16 @@
     </header>
 
     <main id="main-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol class="container">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Middle Tennessee</li>
+        </ol>
+      </nav>
       <section class="page-hero">
         <div class="container">
           <span class="eyebrow">Middle Tennessee</span>
-          <h1>Serving drivers across Middle Tennessee with premium mobile detailing.</h1>
+          <h1>Serving drivers across Middle&nbsp;Tennessee with premium mobile detailing.</h1>
           <p>From La Vergne to nearby communities, we’re proud to bring professional care directly to our clients throughout the region.</p>
           <a href="#request-info" class="btn btn-outline">Request Info</a>
         </div>
@@ -165,7 +188,7 @@
           <div class="service-card">
             <h2>Expanded service area</h2>
             <p class="snippet-answer">Mobile detailing across Middle Tennessee means Zaukus Mobile Detailing travels to your home or office throughout the greater Nashville region to perform interior and exterior detailing, paint correction, and ceramic coating without requiring a shop visit.</p>
-            <p>We provide mobile detailing and paint protection services throughout the greater Nashville area and surrounding regions, including communities within about 1.5 hours of ZIP code 37086. Every appointment arrives fully self-contained — our own water tank, commercial pressure washer, independent generator power, and industrial air compressor with pneumatic tools travel with us, so the same controlled process plays out whether we're parked in downtown Nashville or a rural driveway an hour outside it.</p>
+            <p>We provide mobile detailing and paint protection services throughout the greater Nashville area and surrounding regions, including communities within about 1.5 hours of La Vergne, TN. We bring our own water tank, pressure washer, independent generator power, and industrial air compressor with pneumatic tools to every appointment, so the same controlled process plays out whether we're parked in downtown Nashville or a rural driveway an hour outside it.</p>
             <ul class="about-features">
               <li>East Nashville</li>
               <li>La Vergne</li>
@@ -205,7 +228,7 @@
         <div class="container">
           <div class="section-heading left">
             <span class="eyebrow">Service Coverage</span>
-            <h2>Our Middle Tennessee Service Coverage</h2>
+            <h2>Our Middle&nbsp;Tennessee Service Coverage</h2>
             <p>Zaukus Mobile Detailing dispatches from our hub near La Vergne to bring the same premium mobile detailing, paint correction, and ceramic coating to every community across the Middle Tennessee region. Browse our full list of service areas below or view our coverage map.</p>
           </div>
           <div class="coverage-grid">
@@ -253,7 +276,7 @@
             <p>Luxury mobile detailing, paint correction, and ceramic coating services for drivers in La Vergne, Tennessee.</p>
             <div class="footer-social">
               <a href="https://www.facebook.com/zaukusmobiledetailing" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.48 17.52 2 12 2S2 6.48 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg></a>
-              <a href="https://www.instagram.com/zaukusmobiledetailing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="https://www.instagram.com/zaukusmobiledetailing" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
             </div>
           </div>
 

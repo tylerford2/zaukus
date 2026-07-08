@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7TVR2JKBV"></script>
     <script>
@@ -11,13 +14,15 @@
       gtag('config', 'G-S7TVR2JKBV');
     </script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./media/zaukus-mobile-detailing-logo.png">
+    <link rel="icon" type="image/png" href="./media/favicon.png">
+    <link rel="apple-touch-icon" href="./media/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://fieldd.me" />
+    <link rel="preconnect" href="https://d3vun76hlrxgjr.cloudfront.net" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <title>Professional Detailing | Zaukus Mobile Detailing</title>
@@ -35,8 +40,8 @@
     <meta property="og:description" content="Book professional interior and exterior detailing from Zaukus Mobile Detailing. Paint-safe, hand-applied care delivered to your driveway across Middle Tennessee." />
     <meta property="og:site_name" content="Zaukus Mobile Detailing" />
     <meta property="og:image" content="https://www.zaukusmobiledetailing.com/media/zaukus-mobile-detailing-logo.png" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="400" />
+    <meta property="og:image:width" content="1223" />
+    <meta property="og:image:height" content="438" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -84,6 +89,19 @@
         "url": "https://www.zaukusmobiledetailing.com/services-detailing.html"
       }
     </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zaukusmobiledetailing.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.zaukusmobiledetailing.com/services.html" },
+          { "@type": "ListItem", "position": 3, "name": "Mobile Detailing", "item": "https://www.zaukusmobiledetailing.com/services-detailing.html" }
+        ]
+      }
+    </script>
     <link rel="stylesheet" href="redesign.css" />
     <script type="text/javascript" src="https://fieldd.me/lead-form" defer></script>
     <script type="text/javascript" src="https://d3vun76hlrxgjr.cloudfront.net" defer></script>
@@ -100,7 +118,7 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html" aria-label="Zaukus Mobile Detailing home">
-          <img src="media/zaukus-mobile-detailing-logo.png" alt="Zaukus Mobile Detailing - Professional Auto Detailing" class="logo" />
+          <img src="media/zaukus-logo-nav.png" alt="Zaukus Mobile Detailing - Professional Auto Detailing" class="logo" width="402" height="144" />
         </a>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
           <span></span>
@@ -154,6 +172,13 @@
     </header>
 
     <main id="main-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol class="container">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li aria-current="page">Mobile Detailing</li>
+        </ol>
+      </nav>
       <section class="page-hero">
         <div class="container">
           <span class="eyebrow">Professional Detailing</span>
@@ -166,8 +191,8 @@
       <section class="section">
         <div class="container">
           <div class="section-heading left">
-            <h2>Mobile Detailing Packages for La Vergne &amp; Middle Tennessee</h2>
-            <p>Professional detailing from Zaukus combines a pH-neutral, paint-safe exterior wash with total interior decontamination, delivered mobile to your home or office throughout Middle Tennessee. Because our unit is fully self-contained — carrying its own water tank, commercial pressure washer, independent generator power, and industrial air compressor with pneumatic tools — every package runs on the same controlled process whether we're parked in a downtown garage or a rural driveway. Every package is sized to your vehicle, from coupes to full-size vans and fleets.</p>
+            <h2>Mobile Detailing Packages for La&nbsp;Vergne &amp; Middle&nbsp;Tennessee</h2>
+            <p>Professional detailing from Zaukus combines a pH-neutral, paint-safe exterior wash with total interior decontamination, delivered mobile to your home or office throughout Middle Tennessee. We bring our own water tank, pressure washer, independent generator power, and industrial air compressor with pneumatic tools, so every package runs on the same controlled process whether we're parked in a downtown garage or a rural driveway. Every package is sized to your vehicle, from coupes to full-size vans and fleets.</p>
             <p>A proper detail is about more than a clean car — it's total mechanical decontamination. Every wash uses a highly lubricated, pH-neutral, surface-safe decontamination procedure built on advanced polymer encapsulation, which physically surrounds and lifts dirt particles away from the paint before they can drag across the surface, eliminating wash-induced marring and scratching without leaving behind soapy residue. Drying is finished with pneumatic air tools from our onboard compressor for a controlled, zero-contact result. Inside the cabin, we deep-clean every high-touch surface and treat upholstery safely, without leaving behind the heavy, oily, dust-attracting residues common with over-the-counter products.</p>
             <p>Every vehicle is different, so we organize our detailing packages by size and layout. Select your vehicle category below to see the three core packages we offer for it.</p>
           </div>
@@ -225,7 +250,7 @@
                 </article>
                 <article class="package-card">
                   <h3>Full Detail</h3>
-                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our self-contained water, generator, and air supply.</p>
+                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our own water, generator, and air supply.</p>
                 </article>
               </div>
             </details>
@@ -246,7 +271,7 @@
                 </article>
                 <article class="package-card">
                   <h3>Full Detail</h3>
-                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our self-contained water, generator, and air supply.</p>
+                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our own water, generator, and air supply.</p>
                 </article>
               </div>
             </details>
@@ -267,7 +292,7 @@
                 </article>
                 <article class="package-card">
                   <h3>Full Detail</h3>
-                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our self-contained water, generator, and air supply.</p>
+                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our own water, generator, and air supply.</p>
                 </article>
               </div>
             </details>
@@ -288,7 +313,7 @@
                 </article>
                 <article class="package-card">
                   <h3>Full Detail</h3>
-                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our self-contained water, generator, and air supply.</p>
+                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our own water, generator, and air supply.</p>
                 </article>
               </div>
             </details>
@@ -309,7 +334,7 @@
                 </article>
                 <article class="package-card">
                   <h3>Full Detail</h3>
-                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our self-contained water, generator, and air supply.</p>
+                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our own water, generator, and air supply.</p>
                 </article>
               </div>
             </details>
@@ -330,7 +355,7 @@
                 </article>
                 <article class="package-card">
                   <h3>Full Detail</h3>
-                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our self-contained water, generator, and air supply.</p>
+                  <p>Our comprehensive breakdown combining total interior decontamination with pH-neutral exterior protection in a single visit, powered start to finish by our own water, generator, and air supply.</p>
                 </article>
               </div>
             </details>
@@ -372,7 +397,7 @@
             </div>
           </div>
 
-          <p class="pricing-note">To ensure proper safety and premium craftsmanship, all services are tailored dynamically to your vehicle's specific sizing and current paint condition. Custom options and specialized fleet quotes are always available through our Fieldd platform.</p>
+          <p class="pricing-note">To ensure proper safety and premium craftsmanship, all services are tailored dynamically to your vehicle's specific sizing and current paint condition. Starting prices for Interior Detail, Exterior Wash &amp; Protection, and Full Detail are shown when you book through Fieldd. Custom options and specialized fleet quotes are always available through our Fieldd platform.</p>
         </div>
       </section>
 
@@ -398,7 +423,7 @@
             <p>Luxury mobile detailing, paint correction, and ceramic coating services for drivers in La Vergne, Tennessee.</p>
             <div class="footer-social">
               <a href="https://www.facebook.com/zaukusmobiledetailing" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.48 17.52 2 12 2S2 6.48 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg></a>
-              <a href="https://www.instagram.com/zaukusmobiledetailing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="https://www.instagram.com/zaukusmobiledetailing" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
             </div>
           </div>
 

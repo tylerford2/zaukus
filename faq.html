@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-S7TVR2JKBV"></script>
     <script>
@@ -11,13 +14,15 @@
       gtag('config', 'G-S7TVR2JKBV');
     </script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="./media/zaukus-mobile-detailing-logo.png">
+    <link rel="icon" type="image/png" href="./media/favicon.png">
+    <link rel="apple-touch-icon" href="./media/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://fieldd.me" />
+    <link rel="preconnect" href="https://d3vun76hlrxgjr.cloudfront.net" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
     <title>FAQ, Policies &amp; Terms | Zaukus Mobile Detailing</title>
@@ -35,8 +40,8 @@
     <meta property="og:description" content="Answers to common questions about Zaukus Mobile Detailing's services, booking process, pricing, scheduling, and our full Terms of Service for La Vergne, TN." />
     <meta property="og:site_name" content="Zaukus Mobile Detailing" />
     <meta property="og:image" content="https://www.zaukusmobiledetailing.com/media/zaukus-mobile-detailing-logo.png" />
-    <meta property="og:image:width" content="400" />
-    <meta property="og:image:height" content="400" />
+    <meta property="og:image:width" content="1223" />
+    <meta property="og:image:height" content="438" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -267,6 +272,18 @@
       }
     </script>
 
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.zaukusmobiledetailing.com/" },
+          { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://www.zaukusmobiledetailing.com/faq.html" }
+        ]
+      }
+    </script>
+
     <script type="text/javascript" src="https://fieldd.me/lead-form" defer></script>
     <link rel="stylesheet" href="redesign.css" />
     <script type="text/javascript" src="https://d3vun76hlrxgjr.cloudfront.net" defer></script>
@@ -283,7 +300,7 @@
     <header class="site-header">
       <div class="container nav-wrap">
         <a class="brand" href="index.html" aria-label="Zaukus Mobile Detailing home">
-          <img src="media/zaukus-mobile-detailing-logo.png" alt="Zaukus Mobile Detailing - Professional Auto Detailing" class="logo" />
+          <img src="media/zaukus-logo-nav.png" alt="Zaukus Mobile Detailing - Professional Auto Detailing" class="logo" width="402" height="144" />
         </a>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
           <span></span>
@@ -337,6 +354,12 @@
     </header>
 
     <main id="main-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol class="container">
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">FAQ</li>
+        </ol>
+      </nav>
       <section class="page-hero">
         <div class="container">
           <span class="eyebrow">Help Center</span>
@@ -348,14 +371,22 @@
 
       <section class="section">
         <div class="container">
-          <div class="section-heading">
+          <nav class="faq-jumpnav" aria-label="FAQ categories">
+            <a href="#faq-services">Services &amp; How It Works</a>
+            <a href="#faq-pricing">Pricing &amp; Vehicle Condition</a>
+            <a href="#faq-correction-coating">Correction, Coating &amp; Touch-Up</a>
+            <a href="#faq-scheduling">Scheduling &amp; Weather</a>
+            <a href="#faq-subscriptions">Maintenance Subscriptions</a>
+          </nav>
+
+          <div class="section-heading" id="faq-services">
             <span class="eyebrow">FAQ</span>
             <h2>Services &amp; how mobile detailing works</h2>
           </div>
           <div class="faq-list">
             <details class="faq-item" open>
               <summary>What services do you offer?</summary>
-              <p>Zaukus Mobile Detailing offers Interior Detail, Exterior Wash &amp; Protection, and Full Detail at fixed starting prices, along with Paint Correction, Ceramic Coating, and Touch-Up Paint, each handled by consultation and custom quote. Maintenance subscription options are planned for approved recurring customers.</p>
+              <p>Zaukus Mobile Detailing offers Interior Detail, Exterior Wash &amp; Protection, and Full Detail, with starting prices shown when you book through our Fieldd platform, along with Paint Correction, Ceramic Coating, and Touch-Up Paint, each handled by consultation and custom quote. Maintenance subscription options are planned for approved recurring customers.</p>
               <ul>
                 <li>Interior Detail</li>
                 <li>Exterior Wash &amp; Protection</li>
@@ -364,7 +395,7 @@
                 <li>Ceramic Coating — Quote Required</li>
                 <li>Touch-Up Paint — Quote Required</li>
               </ul>
-              <p>Some services are fixed-price starting services, while correction, ceramic coating, touch-up paint, severe-condition vehicles, and custom work require review before final pricing.</p>
+              <p>Interior Detail, Exterior Wash &amp; Protection, and Full Detail show starting prices in Fieldd, while correction, ceramic coating, touch-up paint, severe-condition vehicles, and custom work require review before final pricing. You can always find current pricing by booking through Fieldd, submitting our Fieldd lead form, calling, or emailing us.</p>
             </details>
 
             <details class="faq-item">
@@ -388,18 +419,18 @@
             </details>
           </div>
 
-          <div class="section-heading faq-category">
+          <div class="section-heading faq-category" id="faq-pricing">
             <span class="eyebrow">FAQ</span>
             <h2>Pricing &amp; vehicle condition</h2>
           </div>
           <div class="faq-list">
             <details class="faq-item">
               <summary>Can pricing change after I book?</summary>
-              <p>Yes. Listed prices are starting prices based on average vehicle condition. Pricing may increase for heavy pet hair, stains, sticky spills, sand, mud, odor, excessive buildup, heavy bugs, tar, sap, water spots, rough paint, contamination, or oversized vehicles that require extra time or product. We'll always discuss any extra work with you before adding charges.</p>
+              <p>Yes. Starting prices shown in Fieldd are based on average vehicle condition. Pricing may increase for heavy pet hair, stains, sticky spills, sand, mud, odor, excessive buildup, heavy bugs, tar, sap, water spots, rough paint, contamination, or oversized vehicles that require extra time or product. We'll always discuss any extra work with you before adding charges.</p>
             </details>
           </div>
 
-          <div class="section-heading faq-category">
+          <div class="section-heading faq-category" id="faq-correction-coating">
             <span class="eyebrow">FAQ</span>
             <h2>Paint correction, ceramic coating &amp; touch-up paint</h2>
           </div>
@@ -460,7 +491,7 @@
             </details>
           </div>
 
-          <div class="section-heading faq-category">
+          <div class="section-heading faq-category" id="faq-scheduling">
             <span class="eyebrow">FAQ</span>
             <h2>Scheduling, weather &amp; cancellations</h2>
           </div>
@@ -476,7 +507,7 @@
             </details>
           </div>
 
-          <div class="section-heading faq-category">
+          <div class="section-heading faq-category" id="faq-subscriptions">
             <span class="eyebrow">FAQ</span>
             <h2>Maintenance subscriptions</h2>
           </div>
@@ -512,7 +543,7 @@
             <p>If safe water or electric access is available as a backup option, the customer may let Zaukus Mobile Detailing know during booking. Final pricing may reflect water or electric allowance when appropriate.</p>
 
             <h3>Vehicle Condition and Pricing</h3>
-            <p>Listed prices are starting prices based on average vehicle condition. Final pricing may increase for excessive pet hair, heavy stains, sticky spills, sand, mud, odor, excessive bugs, tar, sap, water spots, rough paint, heavy contamination, oversized vehicles, lifted vehicles, work vehicles, neglected interiors or exteriors, or unexpected additional labor.</p>
+            <p>Starting prices shown in Fieldd are based on average vehicle condition. Final pricing may increase for excessive pet hair, heavy stains, sticky spills, sand, mud, odor, excessive bugs, tar, sap, water spots, rough paint, heavy contamination, oversized vehicles, lifted vehicles, work vehicles, neglected interiors or exteriors, or unexpected additional labor.</p>
             <p>If extra work is needed, Zaukus Mobile Detailing will discuss it before adding charges.</p>
 
             <h3>Add-Ons and Extra Work</h3>
@@ -634,7 +665,7 @@
             <p>Luxury mobile detailing, paint correction, and ceramic coating services for drivers in La Vergne, Tennessee.</p>
             <div class="footer-social">
               <a href="https://www.facebook.com/zaukusmobiledetailing" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.48 17.52 2 12 2S2 6.48 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg></a>
-              <a href="https://www.instagram.com/zaukusmobiledetailing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+              <a href="https://www.instagram.com/zaukusmobiledetailing" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
             </div>
           </div>
 

@@ -70,6 +70,13 @@
           openDropdown(dropdown, toggle);
         }
       });
+
+      dropdown.addEventListener('mouseleave', () => {
+        if (window.innerWidth > 860) {
+          dropdown.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
     });
 
     siteNav.querySelectorAll('a').forEach((link) => {
@@ -90,6 +97,23 @@
       if (window.innerWidth > 860) {
         siteNav.classList.remove('open');
         navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    document.addEventListener('keydown', (event) => {
+      if (event.key !== 'Escape') return;
+
+      const openDropdownToggle = Array.from(dropdownToggles).find(
+        (toggle) => toggle.getAttribute('aria-expanded') === 'true'
+      );
+      const wasMobileNavOpen = siteNav.classList.contains('open');
+
+      closeMobileNav();
+
+      if (openDropdownToggle) {
+        openDropdownToggle.focus();
+      } else if (wasMobileNavOpen) {
+        navToggle.focus();
       }
     });
   }
@@ -117,10 +141,18 @@
         dot.addEventListener('click', () => this.goToSlide(index));
       });
 
-      if (containerSelector === '.hero-carousel') {
+      this.prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (containerSelector === '.hero-carousel' && !this.prefersReducedMotion) {
         this.startAutoPlay();
         this.container.addEventListener('mouseenter', () => this.stopAutoPlay());
-        this.container.addEventListener('mouseleave', () => this.startAutoPlay());
+        this.container.addEventListener('mouseleave', () => {
+          if (!this.container.contains(document.activeElement)) {
+            this.startAutoPlay();
+          }
+        });
+        this.container.addEventListener('focusin', () => this.stopAutoPlay());
+        this.container.addEventListener('focusout', () => this.startAutoPlay());
       }
 
       this.updateSlides();
@@ -128,7 +160,9 @@
 
     updateSlides() {
       this.slides.forEach((slide, index) => {
-        slide.classList.toggle('active', index === this.currentIndex);
+        const isActive = index === this.currentIndex;
+        slide.classList.toggle('active', isActive);
+        slide.setAttribute('aria-hidden', String(!isActive));
       });
 
       this.dots.forEach((dot, index) => {
@@ -166,7 +200,6 @@
 
   new Carousel('.hero-carousel');
   new Carousel('.gallery-carousel');
-  new Carousel('.testimonials-carousel');
 
   bookingTriggers.forEach((trigger) => {
     trigger.addEventListener('click', (event) => {
@@ -198,7 +231,7 @@
       });
     }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.service-card, .benefit-item, .faq-item, .step, .seo-card, .trust-item').forEach((element) => {
+    document.querySelectorAll('.service-card, .faq-item, .process-step, .seo-card, .trust-item, .hub-tile').forEach((element) => {
       element.classList.add('reveal-item');
       observer.observe(element);
     });
