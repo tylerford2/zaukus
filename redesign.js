@@ -236,4 +236,22 @@
       observer.observe(element);
     });
   }
+
+  const heroSection = document.querySelector('.hero');
+  const scrollCue = document.querySelector('.scroll-cue');
+
+  if (heroSection && scrollCue) {
+    if ('IntersectionObserver' in window) {
+      const heroObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          scrollCue.classList.toggle('is-hidden', entry.intersectionRatio < 0.6);
+        });
+      }, { threshold: [0, 0.6, 1] });
+      heroObserver.observe(heroSection);
+    }
+
+    scrollCue.addEventListener('click', () => {
+      heroSection.nextElementSibling?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  }
 })();
