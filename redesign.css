@@ -228,7 +228,7 @@ main {
 
 .hero {
   position: relative;
-  min-height: clamp(480px, calc(100vh - 110px), 640px);
+  min-height: clamp(420px, calc(100vh - 280px), 620px);
 }
 
 .hero-carousel,
@@ -1588,7 +1588,7 @@ fieldd-lead-form {
   }
 
   .hero {
-    min-height: clamp(420px, calc(100vh - 90px), 560px);
+    min-height: clamp(380px, calc(100vh - 220px), 540px);
   }
 
   .hero-content {
@@ -1716,7 +1716,7 @@ fieldd-lead-form {
   }
 
   .hero {
-    min-height: clamp(380px, calc(100vh - 70px), 520px);
+    min-height: clamp(340px, calc(100vh - 190px), 480px);
   }
 
   .about-grid img,
