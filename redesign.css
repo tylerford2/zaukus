@@ -1056,6 +1056,7 @@ p {
   flex-direction: column;
   gap: 0.85rem;
   margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
 }
 
 @media (min-width: 861px) {
