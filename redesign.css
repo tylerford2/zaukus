@@ -1208,6 +1208,10 @@ p {
   .faq-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .faq-list > .faq-item:nth-child(odd):nth-last-child(1) {
+    grid-column: 1 / -1;
+  }
 }
 
 .faq-item,
