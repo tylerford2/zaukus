@@ -132,7 +132,7 @@
       this.container = document.querySelector(containerSelector);
       if (!this.container) return;
 
-      this.slides = this.container.querySelectorAll('.carousel-slide, .gallery-slide, .testimonial-slide');
+      this.slides = this.container.querySelectorAll('.carousel-slide, .gallery-slide');
       if (!this.slides.length) return;
 
       this.dots = this.container.querySelectorAll('.dot');
