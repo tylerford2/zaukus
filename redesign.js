@@ -48,7 +48,7 @@
       }
     });
 
-    const DROPDOWN_CLOSE_DELAY = 2000;
+    const DROPDOWN_CLOSE_DELAY = 1000;
 
     dropdownToggles.forEach((toggle) => {
       const dropdown = toggle.closest('.nav-dropdown');
