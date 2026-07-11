@@ -1139,6 +1139,13 @@ p {
   text-align: center;
 }
 
+.form-consent {
+  margin-top: 0.85rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
 .pricing-note,
 .pricing-note p {
   color: var(--muted);
