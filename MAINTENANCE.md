@@ -1,15 +1,6 @@
 # Site Maintenance Checklist
 
-This is a static HTML site — nothing here updates itself except where noted. Most of this list is **event-triggered**: leave it alone until the real-world fact actually changes, then paste the relevant section to Claude Code with what changed. Only one item (reviews) is worth revisiting on its own schedule.
-
-## Revisit periodically
-
-### Reviews & ratings
-- **What**: `aggregateRating` (star value + review count) is hardcoded in the JSON-LD on 25 pages (homepage, about, services, contact, faq, reviews, the 3 individual service pages, all 16 location pages). Individual written `Review` entries live only in `reviews.html`.
-- **Auto-updates**: The visible reviews widget on reviews.html (Elfsight) pulls live from Google — nothing to do there.
-- **Does NOT auto-update**: The `aggregateRating` numbers and the hardcoded review text.
-- **Cadence**: Refresh whenever your Google review count changes meaningfully (e.g. 18 → 25), not after every single review.
-- **Tell Claude Code**: your current star rating + review count, and optionally 1-2 new standout reviews (name + text).
+This is a static HTML site — nothing here updates itself except where noted. This list is **event-triggered**: leave it alone until the real-world fact actually changes, then paste the relevant section to Claude Code with what changed.
 
 ## Update only if this actually changes
 
@@ -45,4 +36,4 @@ This is a static HTML site — nothing here updates itself except where noted. M
 - **Tell Claude Code**: only relevant if your Google Business Profile listing URL ever changes.
 
 ---
-*Last full structured-data audit: 2026-07-06.*
+*Last full structured-data audit: 2026-07-06. On 2026-07-11, removed the self-serving `aggregateRating` block sitewide and the hidden `review` array on reviews.html — Google does not grant review-star rich results to a business marking up reviews about itself (with or without individual Review objects), and the hardcoded review text wasn't visible anywhere on the rendered page, which is against Google's structured-data guidelines. The live Elfsight widget on reviews.html remains the actual review display.*
