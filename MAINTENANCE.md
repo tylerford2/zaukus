@@ -8,6 +8,10 @@ This is a static HTML site — nothing here updates itself except where noted. T
 - **What it touches**: footer + JSON-LD on every page (~28 files) — phone, email, and address all appear identically everywhere.
 - **Tell Claude Code**: the new phone/email/address.
 
+### Business hours (currently Mon–Fri 8am–5pm)
+- **What it touches**: the `openingHoursSpecification` JSON-LD block (23 files) AND the visible "Hours:" line in the footer Contact Info column (every page, including `404.html`) — keep both in sync, and match your Google Business Profile hours.
+- **Tell Claude Code**: the new hours, including any days that change.
+
 ### Insurance / licensing claims
 - **What it touches**: `faq.html` ("Are you licensed and insured?") and the trust callout on `services-ceramic-coating.html`.
 - **Tell Claude Code**: the new coverage amount and/or licensing detail (e.g. if coverage increases at a policy renewal).
