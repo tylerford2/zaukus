@@ -23,6 +23,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
@@ -32,3 +34,24 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+      # Tell Bing (and other IndexNow engines) which pages changed in this push.
+      # Only pages listed in sitemap.xml are submitted; failures never block a deploy.
+      - name: Notify IndexNow
+        if: github.event_name == 'push'
+        continue-on-error: true
+        env:
+          BEFORE: ${{ github.event.before }}
+          KEY: 1d1f1e1bdfee5b11e59ac1ffb6ee35f6
+          SITE: https://www.zaukusmobiledetailing.com
+        run: |
+          if ! git cat-file -e "$BEFORE" 2>/dev/null; then echo "No previous commit to diff against"; exit 0; fi
+          urls=""
+          for f in $(git diff --name-only "$BEFORE" "$GITHUB_SHA" -- '*.html'); do
+            path="/$f"; [ "$f" = "index.html" ] && path="/"
+            grep -q "<loc>$SITE$path</loc>" sitemap.xml && urls="$urls\"$SITE$path\","
+          done
+          if [ -z "$urls" ]; then echo "No sitemap pages changed"; exit 0; fi
+          sleep 30
+          body="{\"host\":\"www.zaukusmobiledetailing.com\",\"key\":\"$KEY\",\"keyLocation\":\"$SITE/$KEY.txt\",\"urlList\":[${urls%,}]}"
+          echo "$body"
+          curl -s -w '\nHTTP %{http_code}\n' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$body"

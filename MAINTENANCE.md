@@ -30,6 +30,9 @@ This is a static HTML site — nothing here updates itself except where noted. T
 
 ### Sitemap
 - **What it touches**: `sitemap.xml` needs a new `<url>` entry any time you add a page, and the old entry removed if you retire one. (Found and fixed one gap during this session: `faq.html` was missing.)
+- Bump a page's `<lastmod>` only when its visible content meaningfully changes — not for nav, favicon, or metadata-only edits.
+- Every push to `main` automatically pings IndexNow (Bing, Yandex, etc.) with the changed pages, but **only pages listed in `sitemap.xml`** — a new page that isn't in the sitemap won't be submitted. The key file `1d1f1e1bdfee5b11e59ac1ffb6ee35f6.txt` in the repo root must stay in place for this to work.
+- `404.html` is the custom not-found page (noindex). It uses root-absolute paths (`/redesign.css`) so it renders at any URL depth — keep it that way if you edit it.
 
 ### Google Business Profile review link
 - **What it touches**: the "Leave a review" CTA button URL on `reviews.html`.
@@ -37,3 +40,5 @@ This is a static HTML site — nothing here updates itself except where noted. T
 
 ---
 *Last full structured-data audit: 2026-07-06. On 2026-07-11, removed the self-serving `aggregateRating` block sitewide and the hidden `review` array on reviews.html — Google does not grant review-star rich results to a business marking up reviews about itself (with or without individual Review objects), and the hardcoded review text wasn't visible anywhere on the rendered page, which is against Google's structured-data guidelines. The live Elfsight widget on reviews.html remains the actual review display.*
+
+*2026-10-06 SEO audit: schema `@type` changed from generic `LocalBusiness` to `AutomotiveBusiness` sitewide; removed the placeholder `streetAddress` ("La Vergne" — the city, not a street) since this is a service-area business with no public street address; added `hasMap` pointing at the Google Business Profile; removed `meta keywords` (ignored by Google, a possible spam signal for Bing).*
