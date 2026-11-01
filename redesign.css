@@ -1543,6 +1543,95 @@ p {
   transform: translateY(0);
 }
 
+/* Credential badges under the homepage hero */
+.credential-strip {
+  position: relative;
+  z-index: 3;
+  margin-top: 1.25rem;
+}
+
+.credential-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.credential {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.95rem 1rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow-sm);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.credential svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin-top: 0.1rem;
+  color: var(--brand);
+}
+
+.credential strong {
+  display: block;
+  font-family: 'Sora', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.25;
+  color: var(--brand-deep);
+}
+
+.credential span {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+a.credential:hover,
+a.credential:focus-visible {
+  border-color: var(--brand);
+}
+
+a.credential:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+.footer-credentials {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 860px) {
+  .credential-strip {
+    margin-top: 1rem;
+  }
+
+  .credential-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.6rem;
+  }
+
+  .credential {
+    flex-direction: column;
+    gap: 0.45rem;
+    padding: 0.85rem;
+  }
+
+  .credential strong {
+    font-size: 0.88rem;
+  }
+
+  .credential span {
+    font-size: 0.8rem;
+  }
+}
+
 /* Homepage hero call/book buttons */
 .hero-actions {
   display: flex;
