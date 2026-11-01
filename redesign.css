@@ -941,6 +941,11 @@ p {
   box-shadow: var(--shadow-sm);
 }
 
+/* A lone trust item (homepage Service Area) spans the full row */
+.trust-item:only-of-type {
+  grid-column: 1 / -1;
+}
+
 .trust-item strong {
   color: var(--brand-deep);
   display: block;
