@@ -107,6 +107,7 @@
     window.addEventListener('resize', () => {
       if (window.innerWidth > 860) {
         siteNav.classList.remove('open');
+        document.documentElement.classList.remove('nav-open');
         navToggle.setAttribute('aria-expanded', 'false');
       }
     });
