@@ -25,8 +25,9 @@ This is a static HTML site — nothing here updates itself except where noted. T
 - **Tell Claude Code**: which city to add or remove.
 
 ### Ceramic coating / paint correction / detailing tiers
+- **Policy (2026-11-01)**: ceramic coating tiers (names, durations, differences) are consultation-only and are NOT listed anywhere on the site. No prices or dollar amounts anywhere either (the schema `priceRange` was removed too); pricing questions go to the Fieldd booking portal or a call.
 - **What it touches**: `services-ceramic-coating.html`, `services-paint-correction.html`, `services-detailing.html`, and the matching FAQ answers in `faq.html` and the condensed FAQ on `index.html`.
-- **Tell Claude Code**: what specifically changed about the tier/package (name, duration, technology, included prep).
+- **Tell Claude Code**: what specifically changed about a package (name, included prep), keeping the policy above in mind.
 
 ### Social media links
 - **What it touches**: footer icon links and JSON-LD `sameAs` arrays on every page with a footer (~25 files).

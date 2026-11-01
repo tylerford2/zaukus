@@ -2007,3 +2007,8 @@ fieldd-lead-form {
   }
 }
 
+
+/* Breathing room when a section heading follows a card grid (service pages) */
+.card-grid + .section-heading {
+  margin-top: 2.5rem;
+}
