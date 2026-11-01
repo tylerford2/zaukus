@@ -837,7 +837,8 @@ p {
   grid-column: 1 / -1;
 }
 
-.trust-item strong {
+.trust-item strong,
+.trust-item .trust-item-title {
   color: var(--brand-deep);
   display: block;
   margin-bottom: 0.25rem;
@@ -1912,4 +1913,11 @@ fieldd-lead-form {
 /* Service overview cards: keep "Learn More" from touching the consultation button */
 .tier-card .btn + .service-link {
   margin-top: 0.75rem;
+}
+
+/* Service Area label on the homepage is a real h2; keep the label's size */
+.trust-item .trust-item-title {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 0 0.25rem;
 }
