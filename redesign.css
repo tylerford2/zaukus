@@ -1543,6 +1543,110 @@ p {
   transform: translateY(0);
 }
 
+/* Homepage hero call/book buttons */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.4rem;
+}
+
+.hero-actions .btn-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Mobile-only sticky Call / Text / Book bar */
+.mobile-action-bar {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  body {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom));
+  }
+
+  .mobile-action-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 90;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.35fr;
+    gap: 0.5rem;
+    padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom));
+    background: rgba(255, 252, 245, 0.96);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid var(--line);
+    box-shadow: 0 -8px 24px rgba(89, 49, 20, 0.1);
+    transition: transform 0.25s ease;
+  }
+
+  html.nav-open .mobile-action-bar {
+    transform: translateY(110%);
+  }
+
+  .mobile-action-bar a,
+  .mobile-action-bar button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    min-height: 48px;
+    border-radius: 12px;
+    font: inherit;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .mobile-action-bar svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+  }
+
+  .mab-call {
+    color: #fff;
+    background: linear-gradient(120deg, var(--brand), #e67c35);
+    border: 0;
+  }
+
+  .mab-text {
+    color: var(--ink);
+    background: transparent;
+    border: 1px solid var(--brand);
+  }
+
+  .mab-book {
+    color: #fff;
+    background: var(--ink);
+    border: 0;
+  }
+
+  .mobile-action-bar a:focus-visible,
+  .mobile-action-bar button:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 2px;
+  }
+
+  /* The sticky bar already has Book, so hide Fieldd's floating booking pill on phones */
+  html body #zvxyopenOnlinePortal {
+    display: none !important;
+  }
+
+  .hero-actions .btn {
+    flex: 1 1 auto;
+  }
+
+  /* The hero's Call/Book buttons replace the scroll cue on phones */
+  .hero .scroll-cue {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -1596,6 +1700,24 @@ fieldd-lead-form {
 
   .site-nav.open {
     display: flex;
+    /* The header is sticky, so a tall open menu must scroll inside itself.
+       nowrap keeps the capped column from wrapping items into off-screen columns. */
+    flex-wrap: nowrap;
+    max-height: calc(100vh - 96px);
+    max-height: calc(100dvh - 96px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Without this, a height-capped flex column squashes its items instead of scrolling */
+  .site-nav.open > * {
+    flex-shrink: 0;
+  }
+
+  html.nav-open,
+  html.nav-open body {
+    overflow: hidden;
   }
 
   .site-nav > a,

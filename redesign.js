@@ -19,6 +19,7 @@
   const closeMobileNav = () => {
     if (siteNav && siteNav.classList.contains('open')) {
       siteNav.classList.remove('open');
+      document.documentElement.classList.remove('nav-open');
       if (navToggle) {
         navToggle.setAttribute('aria-expanded', 'false');
       }
@@ -43,6 +44,7 @@
     navToggle.addEventListener('click', () => {
       const isOpen = siteNav.classList.toggle('open');
       navToggle.setAttribute('aria-expanded', String(isOpen));
+      document.documentElement.classList.toggle('nav-open', isOpen);
       if (!isOpen) {
         closeDropdowns();
       }
@@ -210,9 +212,28 @@
   new Carousel('.hero-carousel');
   new Carousel('.gallery-carousel');
 
+  // GA4 events so calls, texts, and booking starts show up in Analytics.
+  const trackEvent = (name, element) => {
+    if (typeof window.gtag !== 'function') return;
+    let location = 'page';
+    if (element.closest('.mobile-action-bar')) location = 'sticky_bar';
+    else if (element.closest('.hero')) location = 'hero';
+    else if (element.closest('.site-header')) location = 'header';
+    else if (element.closest('.site-footer')) location = 'footer';
+    window.gtag('event', name, { link_location: location, page_path: window.location.pathname });
+  };
+
+  document.addEventListener('click', (event) => {
+    const contactLink = event.target.closest('a[href^="tel:"], a[href^="sms:"]');
+    if (contactLink) {
+      trackEvent(contactLink.getAttribute('href').startsWith('tel:') ? 'click_to_call' : 'click_to_text', contactLink);
+    }
+  });
+
   bookingTriggers.forEach((trigger) => {
     trigger.addEventListener('click', (event) => {
       event.preventDefault();
+      trackEvent('begin_booking', trigger);
       window.open('https://zaukusmobiledetailing.fieldd.co', '_blank', 'noopener');
     });
   });
