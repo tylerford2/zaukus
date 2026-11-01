@@ -17,7 +17,10 @@ This is a static HTML site — nothing here updates itself except where noted. T
 - **Tell Claude Code**: the new coverage amount and/or licensing detail (e.g. if coverage increases at a policy renewal).
 
 ### Service area changes (adding/dropping a city)
-- **What it touches**: the nav "Locations" dropdown (every page), the footer "Service Areas" grid (every page), the full "We proudly serve..." paragraph (index.html, about.html, contact.html), the `areaServed` JSON-LD arrays (22 files), a dedicated `location-city.html` page to create or remove, and `sitemap.xml`.
+- **What it touches**: the nav "Locations" dropdown (every page), the footer "Service Areas" grid (every page), the "Jump to a service area" grid (every location page), the county lists on `service-areas.html`, the full "We proudly serve..." paragraph (index.html, about.html, contact.html), the full-list `areaServed` JSON-LD arrays (index, about, contact, faq, reviews, services, the 3 service pages, service-areas), a dedicated `location-city.html` page to create or retire, and `sitemap.xml`. Also update the service-area list in your Google Business Profile to match.
+- **Current list (2026-10-31)**: La Vergne (base), Smyrna, Murfreesboro, Antioch, Donelson, East Nashville, Nashville, Nolensville, Arrington, College Grove, Brentwood, Franklin, Mt. Juliet, Lebanon.
+- **Retired pages**: Belle Meade, Bellevue, and Forest Hills (forward to `location-nashville.html`) and Middle Tennessee (forwards to `service-areas.html`) were cut on 2026-10-31 for low search demand and distance from La Vergne. Their files are now meta-refresh forwarding pages — keep them, out of the sitemap, so old links and bookmarks still land somewhere useful.
+- **Never** publish a street address on a location page (the business address is the owner's home); city + ZIP only.
 - **Tell Claude Code**: which city to add or remove.
 
 ### Ceramic coating / paint correction / detailing tiers
