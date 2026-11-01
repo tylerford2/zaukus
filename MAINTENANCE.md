@@ -38,8 +38,9 @@ This is a static HTML site — nothing here updates itself except where noted. T
 - Every push to `main` automatically pings IndexNow (Bing, Yandex, etc.) with the changed pages, but **only pages listed in `sitemap.xml`** — a new page that isn't in the sitemap won't be submitted. The key file `1d1f1e1bdfee5b11e59ac1ffb6ee35f6.txt` in the repo root must stay in place for this to work.
 - `404.html` is the custom not-found page (noindex). It uses root-absolute paths (`/redesign.css`) so it renders at any URL depth — keep it that way if you edit it.
 
-### Google Business Profile review link
-- **What it touches**: the "Leave a review" CTA button URL on `reviews.html`.
+### Google Business Profile link
+- **What it touches**: the "Read Our Reviews on Google" button on `index.html`, `about.html`, `contact.html`, and `reviews.html`, plus the `hasMap` field in the business JSON-LD (23 files). All use `https://maps.app.goo.gl/dmQ99wbgu2x5oAWK7` (place ID `ChIJSTgHeEwEJ2kRcgjdXqe38Fc`).
+- **Keep in sync with GBP**: the site's name, phone, website, hours (Mon–Fri 8am–5pm), and city (La Vergne 37086) were verified to match the profile on 2026-10-31. The GBP description's service list (full/interior/exterior details, paint correction, ceramic, trim and glass coatings) should stay consistent with what the services pages offer.
 - **Tell Claude Code**: only relevant if your Google Business Profile listing URL ever changes.
 
 ---
