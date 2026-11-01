@@ -13,8 +13,9 @@ This is a static HTML site — nothing here updates itself except where noted. T
 - **Tell Claude Code**: the new hours, including any days that change.
 
 ### Insurance / licensing claims
-- **What it touches**: `faq.html` ("Are you licensed and insured?") and the trust callout on `services-ceramic-coating.html`.
-- **Tell Claude Code**: the new coverage amount and/or licensing detail (e.g. if coverage increases at a policy renewal).
+- **What it touches**: the "Licensed & Insured" badge under the homepage hero, `faq.html` ("Are you licensed and insured?", visible + FAQ schema), and the trust callout on `services-ceramic-coating.html`.
+- **Policy (2026-11-01)**: say "licensed and insured" only. Do not publish the coverage amount, and do not promise that customer vehicles are covered while in our care unless the policy includes garagekeepers / care-custody-control coverage.
+- **Tell Claude Code**: if licensing or insurance status changes, or if you confirm vehicle-in-care coverage and want to say so.
 
 ### Service area changes (adding/dropping a city)
 - **What it touches**: the nav "Locations" dropdown (every page), the footer "Service Areas" grid (every page), the "Jump to a service area" grid (every location page), the county lists on `service-areas.html`, the full "We proudly serve..." paragraph (index.html, about.html, contact.html), the full-list `areaServed` JSON-LD arrays (index, about, contact, faq, reviews, services, the 3 service pages, service-areas), a dedicated `location-city.html` page to create or retire, and `sitemap.xml`. Also update the service-area list in your Google Business Profile to match.
