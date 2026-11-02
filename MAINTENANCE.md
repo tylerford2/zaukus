@@ -2,13 +2,13 @@
 
 This is a static HTML site — nothing here updates itself except where noted. This list is **event-triggered**: leave it alone until the real-world fact actually changes, then paste the relevant section to Claude Code with what changed.
 
-## Revisit periodically
-
-### Google review count and rating (currently 5.0 from 24 reviews)
-- **What it touches**: visible text only, on `index.html` (hero rating line and the "Rated 5.0 from 24 Google reviews" heading) and the intro line on `reviews.html`. The quoted review cards (8 on `reviews.html`, 3 of them repeated on `index.html`) are excerpts copied word for word from Google: first name plus the car only if the customer named it. Never edit a customer's words or add a review that isn't on Google. There is deliberately NO `aggregateRating` schema: Google doesn't show review stars for a business rating itself and forbids marking up reviews copied from another site.
-- **Tell Claude Code**: the new rating and count from your Google Business Profile.
-
 ## Update only if this actually changes
+
+### Google reviews (site says "5-star Google reviews", never a count)
+- **Policy (owner, 2026-11-01)**: never state the number of reviews anywhere on the site. Say "5-star Google reviews" only. This only needs changing if the rating ever drops below 5 stars.
+- **What it touches**: visible text on `index.html` (hero rating line and the reviews heading) and the intro line on `reviews.html`. The quoted review cards (8 on `reviews.html`, 3 of them repeated on `index.html`) are excerpts copied word for word from Google: first name plus the car only if the customer named it. Never edit a customer's words or add a review that isn't on Google. There is deliberately NO `aggregateRating` schema: Google doesn't show review stars for a business rating itself and forbids marking up reviews copied from another site.
+- **Not controlled by the site**: the Elfsight widget on `reviews.html` shows its own header with the review count; turn that off in the Elfsight dashboard if wanted.
+- **Tell Claude Code**: new review excerpts to add, or a change in the star rating.
 
 ### Business contact info (phone, email, address)
 - **What it touches**: footer + JSON-LD on every page (~28 files) — phone, email, and address all appear identically everywhere.
