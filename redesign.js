@@ -213,7 +213,7 @@
   new Carousel('.hero-carousel');
   new Carousel('.gallery-carousel');
 
-  // GA4 events so calls, texts, and booking starts show up in Analytics.
+  // GA4 events: call_click, book_click, form_submit.
   const trackEvent = (name, element) => {
     if (typeof window.gtag !== 'function') return;
     let location = 'page';
@@ -224,20 +224,103 @@
     window.gtag('event', name, { link_location: location, page_path: window.location.pathname });
   };
 
+  const BOOKING_URL = 'https://zaukusmobiledetailing.fieldd.co';
+
   document.addEventListener('click', (event) => {
-    const contactLink = event.target.closest('a[href^="tel:"], a[href^="sms:"]');
-    if (contactLink) {
-      trackEvent(contactLink.getAttribute('href').startsWith('tel:') ? 'click_to_call' : 'click_to_text', contactLink);
+    if (!(event.target instanceof Element)) return;
+    const link = event.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    if (href.startsWith('tel:')) {
+      trackEvent('call_click', link);
+    } else if (href.startsWith(BOOKING_URL) || /(^|\/)book-online\.html/.test(href)) {
+      trackEvent('book_click', link);
     }
   });
 
   bookingTriggers.forEach((trigger) => {
     trigger.addEventListener('click', (event) => {
       event.preventDefault();
-      trackEvent('begin_booking', trigger);
-      window.open('https://zaukusmobiledetailing.fieldd.co', '_blank', 'noopener');
+      trackEvent('book_click', trigger);
+      window.open(BOOKING_URL, '_blank', 'noopener');
     });
   });
+
+  // Third-party scripts load only when needed, to keep phones fast.
+  const loadScript = (src) => {
+    const script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    document.head.appendChild(script);
+    return script;
+  };
+
+  // Lead form: load when the visitor scrolls within ~1.5 screens of it.
+  const leadForms = document.querySelectorAll('fieldd-lead-form');
+  let leadFormRequested = false;
+
+  const watchFormSubmits = () => {
+    let tries = 0;
+    const timer = window.setInterval(() => {
+      tries += 1;
+      leadForms.forEach((form) => {
+        if (form.shadowRoot && !form.dataset.submitTracked) {
+          form.dataset.submitTracked = 'true';
+          form.shadowRoot.addEventListener('submit', () => trackEvent('form_submit', form));
+        }
+      });
+      const allTracked = Array.from(leadForms).every((form) => form.dataset.submitTracked);
+      if (allTracked || tries > 60) window.clearInterval(timer);
+    }, 500);
+  };
+
+  const loadLeadForm = () => {
+    if (leadFormRequested) return;
+    leadFormRequested = true;
+    loadScript('https://fieldd.me/lead-form').addEventListener('load', watchFormSubmits);
+  };
+
+  if (leadForms.length) {
+    if ('IntersectionObserver' in window) {
+      const formObserver = new IntersectionObserver((entries) => {
+        if (entries.some((entry) => entry.isIntersecting)) {
+          formObserver.disconnect();
+          loadLeadForm();
+        }
+      }, { rootMargin: '1200px 0px' });
+      leadForms.forEach((form) => formObserver.observe(form));
+    } else {
+      window.addEventListener('load', loadLeadForm);
+    }
+  }
+
+  // Other lazy third-party widgets (e.g. Elfsight reviews): <div data-lazy-script="url">.
+  document.querySelectorAll('[data-lazy-script]').forEach((element) => {
+    const load = () => loadScript(element.getAttribute('data-lazy-script'));
+    if (!('IntersectionObserver' in window)) {
+      window.addEventListener('load', load);
+      return;
+    }
+    const widgetObserver = new IntersectionObserver((entries, obs) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        obs.disconnect();
+        load();
+      }
+    }, { rootMargin: '800px 0px' });
+    widgetObserver.observe(element);
+  });
+
+  // Fieldd's floating booking pill is hidden on phones (the sticky bar covers booking),
+  // so only desktop loads it, after the page has finished loading.
+  if (window.matchMedia('(min-width: 861px)').matches) {
+    window.addEventListener('load', () => {
+      window.setTimeout(() => {
+        loadScript('https://d3vun76hlrxgjr.cloudfront.net').addEventListener('load', () => {
+          if (window.FielddBooking) window.FielddBooking.init('5Hx4Xp');
+        });
+      }, 1500);
+    });
+  }
 
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (event) => {

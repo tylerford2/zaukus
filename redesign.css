@@ -1578,7 +1578,7 @@ a.credential:focus-visible {
   height: 18px;
 }
 
-/* Mobile-only sticky Call / Text / Book bar */
+/* Mobile-only sticky Call / Book bar */
 .mobile-action-bar {
   display: none;
 }
@@ -1595,7 +1595,7 @@ a.credential:focus-visible {
     bottom: 0;
     z-index: 90;
     display: grid;
-    grid-template-columns: 1fr 1fr 1.35fr;
+    grid-template-columns: 1fr 1fr;
     gap: 0.5rem;
     padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom));
     background: rgba(255, 252, 245, 0.96);
@@ -1634,12 +1634,6 @@ a.credential:focus-visible {
     color: #fff;
     background: linear-gradient(120deg, var(--brand), #e67c35);
     border: 0;
-  }
-
-  .mab-text {
-    color: var(--ink);
-    background: transparent;
-    border: 1px solid var(--brand);
   }
 
   .mab-book {
