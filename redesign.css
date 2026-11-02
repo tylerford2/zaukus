@@ -1883,3 +1883,9 @@ fieldd-lead-form {
     margin-bottom: 0;
   }
 }
+
+/* About page: owner bios under the team photo */
+.team-grid {
+  margin-top: 1.5rem;
+  align-items: start;
+}
