@@ -154,7 +154,7 @@
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" /></noscript>
     <link rel="stylesheet" href="redesign.css" />
   </head>
-  <body>
+  <body class="home">
     <!-- Skip to Content Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -217,7 +217,7 @@
     </header>
 
     <main id="main-content">
-      <!-- Hero Section with Carousel -->
+      <!-- Hero -->
       <section class="hero" id="top">
         <div class="hero-carousel">
           <div class="carousel-slide active">
@@ -241,14 +241,18 @@
         <div class="hero-overlay"></div>
         <div class="container hero-content">
           <span class="eyebrow">Zaukus Mobile Detailing</span>
-          <h1>Mobile auto detailing in La&nbsp;Vergne and nearby towns.</h1>
-          <p class="hero-text">Premium mobile detailing, paint correction, and ceramic coating, delivered to your driveway or office.</p>
+          <h1>Mobile detailing in La&nbsp;Vergne and nearby towns</h1>
+          <p class="hero-text">We come to your home or office with our own water and power.</p>
+          <a class="hero-rating" href="https://maps.app.goo.gl/dmQ99wbgu2x5oAWK7" target="_blank" rel="noopener noreferrer">
+            <span class="google-review-stars" aria-hidden="true">★★★★★</span>
+            <span>5.0 from 24 Google reviews</span>
+          </a>
           <div class="hero-actions">
-            <a href="tel:6153399763" class="btn btn-primary">
+            <a href="https://zaukusmobiledetailing.fieldd.co" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Book Online</a>
+            <a href="tel:6153399763" class="btn btn-secondary">
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               Call (615) 339-9763
             </a>
-            <button type="button" class="btn btn-secondary" data-open-booking>Book Online</button>
           </div>
         </div>
         <button type="button" class="scroll-cue" aria-label="Scroll down the page to explore Zaukus Mobile Detailing">
@@ -259,7 +263,7 @@
         </button>
       </section>
 
-      <!-- Credentials: trust signals directly under the hero -->
+      <!-- Credentials -->
       <section class="credential-strip" aria-label="Credentials">
         <div class="container credential-grid">
           <div class="credential">
@@ -274,228 +278,95 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
             <div><strong>Licensed &amp; Insured</strong></div>
           </div>
-          <a class="credential credential--reviews" href="reviews.html">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
-            <div><strong>Five-Star Rated on Google</strong><span class="credential-link">Read our customer reviews &rarr;</span></div>
-          </a>
         </div>
       </section>
 
-      <!-- Homepage Hub: compact overview with clickable tiles into dedicated pages -->
-      <section class="hub-section" aria-label="Explore Zaukus Mobile Detailing">
-        <div class="container hub-grid">
-          <a class="hub-tile" href="about.html">
-            <h3 role="heading" aria-level="2">About &amp; Why Choose Us</h3>
-            <p>Our process, our promise, and what makes Zaukus different.</p>
-            <span class="hub-tile-arrow">Learn More →</span>
-          </a>
-          <a class="hub-tile" href="reviews.html">
-            <h3 role="heading" aria-level="2">Client Reviews</h3>
-            <p>See what customers are saying on Google.</p>
-            <span class="hub-tile-arrow">Read Reviews →</span>
-          </a>
-          <a class="hub-tile" href="service-areas.html">
-            <h3 role="heading" aria-level="2">Service Areas</h3>
-            <p>La Vergne, Smyrna, Nashville, and more towns nearby.</p>
-            <span class="hub-tile-arrow">View Coverage →</span>
-          </a>
-          <a class="hub-tile" href="faq.html">
-            <h3 role="heading" aria-level="2">FAQ</h3>
-            <p>Answers on scheduling, pricing, and what to expect.</p>
-            <span class="hub-tile-arrow">Get Answers →</span>
-          </a>
-        </div>
-      </section>
-
-      <!-- Booking Section -->
-      <section class="booking-section" aria-label="Book an appointment">
-        <div class="container booking-grid">
-          <div class="booking-primary">
-            <span class="eyebrow">Get Started</span>
-            <h2>Ready to book your detail?</h2>
-            <p>Book online in a couple minutes, or call to talk through your vehicle's needs first.</p>
-            <div class="booking-primary-actions">
-              <button type="button" class="btn btn-primary btn-large booking-trigger" data-open-booking>Book Your Detail</button>
-              <a href="tel:6153399763" class="btn btn-outline btn-large">
-                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                Call (615) 339-9763
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Trust Stats Section -->
-      <section class="trust-bar">
-        <div class="container trust-grid">
-          <div class="trust-item">
-            <h2 class="trust-item-title">Service Area</h2>
-            <span>We proudly serve La Vergne, Nashville, Brentwood, Franklin, Smyrna, Nolensville, Murfreesboro, Lebanon, Mt. Juliet, Donelson, Antioch, East Nashville, Arrington, College Grove, and nearby communities with premium mobile detailing brought straight to your door.</span>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="section">
+      <!-- Reviews -->
+      <section class="section testimonials-section" id="reviews">
         <div class="container">
           <div class="section-heading">
-            <span class="eyebrow">Our Services</span>
-            <h2>Detailing services designed to protect, refine, and preserve your vehicle.</h2>
-            <p class="snippet-answer">Zaukus Mobile Detailing provides professional auto detailing, paint correction, and ceramic coating in La Vergne and nearby towns, bringing professional equipment to your driveway or office for careful, paint-safe work without a shop visit. Every step, from the first rinse to the final walkthrough, follows the same process we would use in a shop, just parked in your driveway.</p>
+            <span class="eyebrow">Google Reviews</span>
+            <h2>Rated 5.0 from 24 Google reviews</h2>
           </div>
-
-          <div class="card-grid">
-            <article class="service-card">
-              <div class="card-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <path d="M12 6v6l4 2"></path>
-                </svg>
-              </div>
-              <h3>Professional Mobile Detailing</h3>
-              <p>More than a clean car. Our exterior wash uses a slick polymer soap that lifts dirt off the paint instead of dragging it across, so washing doesn't leave swirl marks or soapy residue behind. We finish drying with compressed air to clear water out of trim, mirrors, and seams. Inside, we deep-clean every high-touch surface and clean upholstery without leaving greasy, dust-attracting dressings behind. Packages are priced by vehicle size, from coupes to vans and fleet vehicles.</p>
-              <ul>
-                <li>Interior Detail</li>
-                <li>Exterior Wash &amp; Protection</li>
-                <li>Full Detail</li>
-                <li>Sized for coupe through van/fleet</li>
-              </ul>
-              <div class="card-actions">
-                <button type="button" class="service-link booking-trigger" data-open-booking>Book This Service →</button>
-                <a href="services-detailing.html" class="service-link service-link-outline" aria-label="Learn more about Professional Mobile Detailing">Learn More →</a>
-              </div>
-            </article>
-            <article class="service-card tier-card">
-              <div class="card-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"></path>
-                  <path d="M12 6v6l4 2"></path>
-                </svg>
-              </div>
-              <h3>Paint Correction</h3>
-              <p>Paint correction permanently removes swirl marks and light marring instead of hiding them under a glaze. We machine polish the clear coat, the paint's top protective layer, until it is smooth and glossy again. Our polishes are low-dust, so trim, plastics, and body lines stay clean instead of caked with white residue.</p>
-              <ul>
-                <li>One-Step Enhancement</li>
-                <li>Two-Step Correction</li>
-                <li>Touch-Up Paint</li>
-              </ul>
-              <span class="consultation-badge">Consultation &amp; Custom Quote Only</span>
-              <div class="card-actions">
-                <a href="https://zaukusmobiledetailing.fieldd.co" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Book a consultation for Precision Paint Correction">Book a Consultation</a>
-                <a href="services-paint-correction.html" class="service-link service-link-outline" aria-label="Learn more about Precision Paint Correction">Learn More →</a>
-              </div>
-            </article>
-            <article class="service-card tier-card">
-              <div class="card-icon">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                </svg>
-              </div>
-              <h3>Ceramic Coating</h3>
-              <p>A ceramic coating bonds to your paint and forms a hard, slick layer of protection. It adds gloss, makes water bead and roll off, resists stains from bird droppings, bugs, and road grime, and makes routine washes much easier. We'll help you choose the right coating for your vehicle during a consultation.</p>
-              <span class="consultation-badge">Consultation &amp; Custom Quote Only</span>
-              <div class="card-actions">
-                <a href="https://zaukusmobiledetailing.fieldd.co" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Book a consultation for Ceramic Coating">Book a Consultation</a>
-                <a href="services-ceramic-coating.html" class="service-link service-link-outline" aria-label="Learn more about Ceramic Coating">Learn More →</a>
-              </div>
-            </article>
+          <!-- REVIEWS: add 3 real Google reviews here as <figure class="review-card"> items inside a <div class="review-grid">. -->
+          <div class="testimonials-cta">
+            <a href="https://maps.app.goo.gl/dmQ99wbgu2x5oAWK7" target="_blank" rel="noopener noreferrer" class="btn btn-primary google-review-btn">
+              <span class="google-review-stars" aria-hidden="true">★★★★★</span>
+              <span>Read Our Reviews on Google</span>
+            </a>
+            <a href="reviews.html" class="btn btn-outline">More Reviews</a>
           </div>
-
-          <div class="callout-block">
-            <h3>Why Coatings Start With a Consultation</h3>
-            <p>A coating locks in whatever is underneath it, so the paint has to be fully cleaned and corrected first. That prep is different for every vehicle, so we quote coatings after seeing the paint in person. Select "Book a Consultation" in our online lead form to get started.</p>
-          </div>
-
-          <p class="pricing-note">Pricing is based on your vehicle's size and the condition of the paint. Custom options and fleet quotes are available through our Fieldd booking platform.</p>
         </div>
       </section>
 
-      <section id="process" class="section section-alt">
+      <!-- Services -->
+      <section id="services" class="section section-alt">
         <div class="container">
-          <div class="section-heading left">
-            <p class="eyebrow">Our Process</p>
-            <h2>A refined process built around exceptional outcomes.</h2>
-            <p>Careful prep, quality products, and the same proven steps on every vehicle, so the result is worth what you paid for it.</p>
+          <div class="section-heading">
+            <span class="eyebrow">Services</span>
+            <h2>Detailing, paint correction, and ceramic coating</h2>
+          </div>
+          <div class="card-grid">
+            <article class="service-card">
+              <h3>Mobile Detailing</h3>
+              <p>A paint-safe hand wash outside and a deep clean inside, priced by vehicle size.</p>
+              <ul class="price-list" aria-label="Starting prices for a sedan">
+                <li><span>Full Detail</span><strong>from $229</strong></li>
+                <li><span>Interior Detail</span><strong>from $159</strong></li>
+                <li><span>Exterior Wash &amp; Protection</span><strong>from $119</strong></li>
+              </ul>
+              <p>Sedan prices. SUVs and trucks from $269; vans are quoted.</p>
+              <a href="services-detailing.html" class="service-link" aria-label="Detailing packages and prices by vehicle size">See Detailing &amp; Prices &rarr;</a>
+            </article>
+            <article class="service-card">
+              <h3>Paint Correction</h3>
+              <p>Machine polishing that removes swirl marks, light marring, and haze, and brings back the gloss.</p>
+              <p class="price-from">Custom quote after a free paint check</p>
+              <a href="services-paint-correction.html" class="service-link" aria-label="Learn more about Paint Correction">Learn More &rarr;</a>
+            </article>
+            <article class="service-card">
+              <h4 role="heading" aria-level="3">Ceramic Coating</h4>
+              <p>A hard, slick layer that adds gloss, makes water bead off, and makes washing easier for years.</p>
+              <p class="price-from">Custom quote after a free paint check</p>
+              <a href="services-ceramic-coating.html" class="service-link" aria-label="Learn more about Ceramic Coating">Learn More &rarr;</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section id="process" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">How It Works</span>
+            <h2>Three steps to a clean car</h2>
           </div>
           <div class="process-grid">
             <article class="process-step">
               <span class="process-number">1</span>
-              <h3>Consultation</h3>
-              <p>We listen to your goals so we can recommend the right service for your vehicle and budget, walking through your paint's current condition before any work begins.</p>
+              <h3>Book online or call</h3>
+              <p>Pick your service and a time in our online booking, or call <a href="tel:6153399763">(615) 339-9763</a>.</p>
             </article>
             <article class="process-step">
               <span class="process-number">2</span>
-              <h3>Preparation</h3>
-              <p>Every detail begins with a safe hand wash and surface inspection, using our own water tank, generator power, and pressure washing equipment so prep never depends on what's available at your location.</p>
+              <h3>We come to you</h3>
+              <p>We park at your home or office and bring our own water and power.</p>
             </article>
             <article class="process-step">
               <span class="process-number">3</span>
-              <h3>Service Delivery</h3>
-              <p>We work through each step in order, then finish drying with compressed air so water doesn't drip out of trim and mirrors after we leave.</p>
-            </article>
-            <article class="process-step">
-              <span class="process-number">4</span>
-              <h3>Final Walkthrough</h3>
-              <p>We review the results with you in direct sunlight and shade alike, and make sure every detail meets our standard before we consider the job finished.</p>
+              <h3>Drive away in a clean car</h3>
+              <p>We walk around the vehicle with you before we leave.</p>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="about" class="section">
-        <div class="container about-grid">
-          <img
-            src="media/white-pickup-after-mobile-detail.webp"
-            alt="White pickup truck with clean paint and dressed tires after a mobile detail"
-            width="570"
-            height="958"
-            loading="lazy"
-            decoding="async"
-          />
-          <div>
-            <p class="eyebrow">Who We Are</p>
-            <h2>Premium mobile detailing rooted in process, protection, and pride.</h2>
-            <p>
-              Based in La Vergne, TN 37086, Zaukus Mobile Detailing is a tailored alternative to rushed, high-volume car care, matched to your vehicle's goals, routine, and condition. Rather than relying on a customer's outdoor spigot or household outlet, we bring our own water, power, and air supply so the same controlled process plays out whether we're parked in a downtown garage or a rural driveway.
-            </p>
-            <ul class="about-features">
-              <li>Mobile service that comes to your location, carrying its own water, power, and air supply</li>
-              <li>Paint-safe methods, including a gentle lift-off wash and low-dust polishing</li>
-              <li>Tailored care for detailing, correction, and ceramic protection</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- Why Choose Us Section -->
-      <section id="why-choose" class="section section-alt">
-        <div class="container promise-grid">
-          <div class="promise-copy">
-            <span class="eyebrow">Why Choose Us</span>
-            <h2>One careful process. No shortcuts.</h2>
-            <p>Mobile detailing, paint correction, and ceramic coating, delivered to your location with paint-safe technique and results that last.</p>
-          </div>
-          <div class="promise-side">
-            <div class="promise-quote">
-              <p>“Every vehicle gets the same careful process, whether it's a daily driver or a weekend car.”</p>
-              <span>Zaukus Mobile Detailing</span>
-            </div>
-            <div class="promise-actions">
-              <button type="button" class="btn btn-primary booking-trigger" data-open-booking>Book Your Detail</button>
-              <a href="#contact" class="btn btn-secondary">Request Info</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Gallery Section -->
+      <!-- Our work (swap in 4 to 6 before-and-after pairs when available) -->
       <section id="gallery" class="section section-alt">
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">Our Work</span>
-            <h2>Signature transformations</h2>
-            <p>See the depth, gloss, and protection we deliver for vehicles around La Vergne and nearby towns.</p>
+            <h2>Recent work</h2>
           </div>
 
           <div class="gallery-carousel">
@@ -522,144 +393,116 @@
         </div>
       </section>
 
-      <!-- Reviews Section -->
-      <section class="section testimonials-section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Client Reviews</span>
-            <h2>See what customers are saying on Google</h2>
-            <p>Read verified reviews from real Zaukus Mobile Detailing customers on our Google Business Profile.</p>
-            <div class="testimonials-cta">
-              <a href="https://maps.app.goo.gl/dmQ99wbgu2x5oAWK7" target="_blank" rel="noopener noreferrer" class="btn btn-primary google-review-btn">
-                <span class="google-review-stars" aria-hidden="true">★★★★★</span>
-                <span>Read Our Reviews on Google</span>
-              </a>
-              <a href="https://search.google.com/local/writereview?placeid=ChIJSTgHeEwEJ2kRcgjdXqe38Fc" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Leave a Google Review</a>
-            </div>
+      <!-- Meet Brian and Tyler -->
+      <section id="about" class="section">
+        <div class="container about-grid">
+          <img
+            src="media/brian-and-tyler-zaukus-mobile-detailing.jpg"
+            srcset="media/brian-and-tyler-zaukus-mobile-detailing-mobile.jpg 800w, media/brian-and-tyler-zaukus-mobile-detailing.jpg 1200w"
+            sizes="(max-width: 860px) 100vw, 50vw"
+            alt="Brian and Tyler of Zaukus Mobile Detailing standing in front of a brick wall"
+            width="1200"
+            height="800"
+            loading="lazy"
+            decoding="async"
+          />
+          <div>
+            <p class="eyebrow">Who We Are</p>
+            <h2>Meet Brian and Tyler</h2>
+            <p>Zaukus Mobile Detailing is the two of us, based in La&nbsp;Vergne. When you book, you deal directly with the people who do the work, not a call center or a rotating crew.</p>
+            <p>We bring our own water, power, and equipment, so all we need is room to work. We're a Certified C6 Ceramics Installer and an official CARFAX Service Shop, and we're licensed and insured. <a href="about.html">More about us</a>.</p>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section / CTA -->
+      <!-- Maintenance plans -->
+      <section id="maintenance" class="section section-alt">
+        <div class="container">
+          <div class="callout-block">
+            <h2>Maintenance plans</h2>
+            <p>Keep your vehicle clean with a Full Detail every 2 weeks, monthly, or every 2 months, from $199 for a sedan. Plans are open to approved customers whose vehicles are already in good shape.</p>
+            <a href="maintenance-plan.html" class="service-link">See Maintenance Plans &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Service area -->
+      <section id="service-area" class="section">
+        <div class="container">
+          <div class="section-heading">
+            <span class="eyebrow">Service Area</span>
+            <h2>Towns we serve</h2>
+            <p>Based in La&nbsp;Vergne, TN 37086. Pick your town for local details.</p>
+          </div>
+          <div class="coverage-link-grid town-grid">
+            <a class="coverage-link" href="location-la-vergne.html">La Vergne</a>
+            <a class="coverage-link" href="location-smyrna.html">Smyrna</a>
+            <a class="coverage-link" href="location-murfreesboro.html">Murfreesboro</a>
+            <a class="coverage-link" href="location-antioch.html">Antioch</a>
+            <a class="coverage-link" href="location-donelson.html">Donelson</a>
+            <a class="coverage-link" href="location-east-nashville.html">East Nashville</a>
+            <a class="coverage-link" href="location-nashville.html">Nashville</a>
+            <a class="coverage-link" href="location-nolensville.html">Nolensville</a>
+            <a class="coverage-link" href="location-arrington.html">Arrington</a>
+            <a class="coverage-link" href="location-college-grove.html">College Grove</a>
+            <a class="coverage-link" href="location-brentwood.html">Brentwood</a>
+            <a class="coverage-link" href="location-franklin.html">Franklin</a>
+            <a class="coverage-link" href="location-mt-juliet.html">Mt. Juliet</a>
+            <a class="coverage-link" href="location-lebanon.html">Lebanon</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Lead form -->
       <section id="contact" class="section section-alt contact-section">
         <div class="container">
           <div class="section-heading">
-            <span class="eyebrow">Get Started</span>
-            <h2>Let’s work together</h2>
-            <p>If you’re interested in working with us, complete the form with a few details about your vehicle. We’ll review your message and get back to you soon.</p>
+            <span class="eyebrow">Get a Quote</span>
+            <h2>Send us a message</h2>
+            <p>Tell us about your vehicle and what you need. We'll get back to you with pricing and availability.</p>
           </div>
-
-          <div class="contact-wrapper">
-            <!-- Contact Form -->
-            <div class="lead-form-wrapper">
-              <fieldd-lead-form code="5Hx4Xp"></fieldd-lead-form>
-              <p class="form-consent">By submitting your information, you agree to receive calls, texts, and emails from Zaukus Mobile Detailing about your appointment, including promotional offers. Message and data rates may apply.</p>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="contact-info">
-              <div class="info-item">
-                <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                <div>
-                  <h4 role="heading" aria-level="3">Phone</h4>
-                  <a href="tel:6153399763">(615) 339-9763</a>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                  <polyline points="22,6 12,13 2,6"></polyline>
-                </svg>
-                <div>
-                  <h4 role="heading" aria-level="3">Email</h4>
-                  <a href="mailto:brianz@zaukusmobiledetailing.com">brianz@zaukusmobiledetailing.com</a>
-                </div>
-              </div>
-
-              <div class="info-item">
-                <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                <div>
-                  <h4 role="heading" aria-level="3">Service Area</h4>
-                  <p>La Vergne, TN 37086 & nearby towns</p>
-                </div>
-              </div>
-
-              <div class="social-links">
-                <h4 role="heading" aria-level="3">Follow Us</h4>
-                <div class="social-icons">
-                  <a href="https://www.facebook.com/zaukusmobiledetailing/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.48 17.52 2 12 2S2 6.48 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.44-4.92 8.44-9.94Z"/></svg></a>
-                  <a href="https://www.instagram.com/zaukusmobiledetailing/" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
-                </div>
-              </div>
-            </div>
+          <div class="lead-form-wrapper">
+            <fieldd-lead-form code="5Hx4Xp"></fieldd-lead-form>
+            <p class="form-consent">By submitting your information, you agree to receive calls, texts, and emails from Zaukus Mobile Detailing about your appointment, including promotional offers. Message and data rates may apply.</p>
           </div>
         </div>
       </section>
 
-      <!-- FAQ Section -->
+      <!-- FAQ -->
       <section class="section faq-section">
         <div class="container">
           <div class="section-heading">
             <span class="eyebrow">Questions</span>
-            <h2>Frequently Asked Questions</h2>
+            <h2>Common questions</h2>
           </div>
 
           <div class="faq-grid">
             <details class="faq-item">
               <summary>How long does a detail take?</summary>
-              <p>Professional details typically take 2-4 hours depending on your vehicle's size and condition. We'll provide a time estimate when you book.</p>
+              <p>Most details take 2 to 5 hours depending on your vehicle's size and condition. We'll give you a time estimate when you book.</p>
             </details>
 
             <details class="faq-item">
-              <summary>Do you use safe products?</summary>
-              <p>Yes. We hand wash with gentle, paint-safe products, including a slick polymer wash that lifts dirt off the paint instead of dragging it across the surface. No harsh chemicals and no automated brushes.</p>
+              <summary>Do I need to provide water or power?</summary>
+              <p>No. We bring our own water and electric equipment to every appointment, so all we need is a safe spot to work.</p>
             </details>
 
             <details class="faq-item">
-              <summary>How long does ceramic coating last?</summary>
-              <p>Professional coatings last for years, but how long depends on the coating you choose and how the vehicle is cared for. We cover durability for each option during your consultation, and any rating is a baseline, not a guarantee. Harsh automatic washes or neglected maintenance can wear down even our best coating quickly. We recommend monthly maintenance to help maximize longevity.</p>
+              <summary>What happens if the weather is bad?</summary>
+              <p>We work year-round, but we may reschedule for rain, storms, freezing temperatures, or other conditions that affect safety or results. If weather moves your appointment, we'll find the next date that works for you.</p>
             </details>
 
             <details class="faq-item">
               <summary>Can you remove swirl marks?</summary>
-              <p>Yes. Paint correction removes swirl marks, light marring, and haze by machine polishing the clear coat, and our low-dust polishes keep trim and body lines clean. We don't do deep damage repair, body work, or repainting; anything deep enough to catch a fingernail is beyond what polishing can safely fix.</p>
+              <p>Yes. Paint correction removes swirl marks, light marring, and haze by machine polishing the clear coat. We don't do body work or repainting; damage deep enough to catch a fingernail is beyond what polishing can safely fix.</p>
             </details>
 
             <details class="faq-item">
-              <summary>Do you work in winter?</summary>
-              <p>We work year-round! We take extra precautions in cold weather to ensure product application and drying are optimal.</p>
-            </details>
-
-            <details class="faq-item">
-              <summary>What areas do you service?</summary>
-              <p>We primarily service La Vergne, TN and surrounding towns. Contact us to confirm service availability for your location.</p>
+              <summary>How long does ceramic coating last?</summary>
+              <p>Years, but it depends on the coating you choose and how the vehicle is cared for. We cover durability for each option during your free paint check, and any rating is a baseline, not a guarantee.</p>
             </details>
           </div>
-        </div>
-      </section>
-
-      <!-- Final CTA Section -->
-      <section class="section cta-final">
-        <div class="container">
-          <div class="cta-content">
-            <h2>Ready for premium mobile detailing?</h2>
-            <p>Book your appointment in La Vergne, TN 37086 and let Zaukus Mobile Detailing take care of your vehicle with professional, detail-oriented work.</p>
-            <div class="cta-buttons">
-              <button type="button" class="btn btn-primary btn-large booking-trigger" data-open-booking>Book Now</button>
-              <a href="tel:6153399763" class="btn btn-secondary btn-secondary-contrast btn-large">
-                <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                </svg>
-                Call (615) 339-9763
-              </a>
-            </div>
-          </div>
+          <p class="faq-more"><a href="faq.html" class="service-link">See All FAQs &rarr;</a></p>
         </div>
       </section>
     </main>

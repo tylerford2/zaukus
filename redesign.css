@@ -77,7 +77,6 @@ img {
   border: 0;
 }
 
-
 .site-header {
   position: sticky;
   top: 0;
@@ -367,7 +366,6 @@ h3 {
 .service-card p,
 .seo-article p,
 .page-hero p,
-.trust-item span,
 li,
 p {
   color: inherit;
@@ -469,95 +467,6 @@ p {
   justify-content: center;
   align-items: center;
   gap: 0.75rem;
-}
-
-.booking-section {
-  position: relative;
-  z-index: 3;
-  padding: clamp(1.75rem, 4vw, 2.5rem) 0 0;
-}
-
-.booking-grid {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-lg);
-  padding: clamp(1.75rem, 4vw, 2.75rem);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 2rem;
-  align-items: center;
-}
-
-.booking-primary p {
-  color: var(--muted);
-  max-width: 46ch;
-}
-
-.booking-primary-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 1.35rem;
-}
-
-@media (max-width: 860px) {
-  .booking-grid {
-    grid-template-columns: 1fr;
-  }
-
-}
-
-.hub-section {
-  padding: clamp(1.75rem, 4vw, 2.5rem) 0 0;
-}
-
-.hub-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-}
-
-.hub-tile {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.5rem;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-  padding: 1.5rem;
-  color: var(--ink);
-  text-decoration: none;
-  cursor: pointer;
-  font: inherit;
-  text-align: left;
-  transition: transform 200ms ease, box-shadow 200ms ease;
-}
-
-.hub-tile:hover,
-.hub-tile:focus-visible {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-}
-
-.hub-tile h3 {
-  margin: 0;
-  font-size: 1.1rem;
-}
-
-.hub-tile p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-
-.hub-tile-arrow {
-  margin-top: auto;
-  padding-top: 0.35rem;
-  font-weight: 700;
-  color: var(--accent);
 }
 
 .carousel-nav {
@@ -695,16 +604,14 @@ p {
   background: #fff;
 }
 
-.footer-social,
-.social-icons {
+.footer-social {
   display: flex;
   align-items: center;
   gap: 0.85rem;
   margin-top: 0.5rem;
 }
 
-.footer-social a,
-.social-icons a {
+.footer-social a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -714,19 +621,13 @@ p {
   transition: opacity 0.2s ease;
 }
 
-.footer-social a:hover,
-.social-icons a:hover {
+.footer-social a:hover {
   opacity: 0.7;
 }
 
 .footer-social svg {
   width: 1.25rem;
   height: 1.25rem;
-}
-
-.social-icons svg {
-  width: 1.5rem;
-  height: 1.5rem;
 }
 
 .site-footer {
@@ -812,38 +713,7 @@ p {
   }
 }
 
-.trust-bar {
-  margin-top: 1.75rem;
-  position: relative;
-  z-index: 3;
-}
-
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.85rem;
-}
-
-.trust-item {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 1rem 1.05rem;
-  box-shadow: var(--shadow-sm);
-}
-
 /* A lone trust item (homepage Service Area) spans the full row */
-.trust-item:only-of-type {
-  grid-column: 1 / -1;
-}
-
-.trust-item strong,
-.trust-item .trust-item-title {
-  color: var(--brand-deep);
-  display: block;
-  margin-bottom: 0.25rem;
-  font-family: 'Sora', sans-serif;
-}
 
 .section {
   padding: clamp(2.9rem, 6.5vw, 5rem) 0;
@@ -1042,6 +912,8 @@ p {
 
 /* Links inside body text look like links */
 .service-card p a,
+.process-step p a,
+.about-grid p a,
 .faq-item p a,
 .seo-article p a,
 .policy-block p a,
@@ -1166,8 +1038,77 @@ p {
   box-shadow: var(--shadow-lg);
 }
 
+.callout-block h2,
 .callout-block h3 {
   color: #fff;
+}
+
+.callout-block .service-link {
+  display: inline-block;
+  margin-top: 0.9rem;
+  color: #ffd5ac;
+}
+
+.section > .container > .callout-block:first-child {
+  margin-top: 0;
+}
+
+/* Homepage: Google rating under the hero text */
+.hero-rating {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.15rem 0 1.1rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.hero-rating:hover span:last-child,
+.hero-rating:focus-visible span:last-child {
+  text-decoration: underline;
+}
+
+/* Real Google reviews as plain text */
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  max-width: 1100px;
+  margin: 0 auto 1.75rem;
+}
+
+.review-card {
+  margin: 0;
+  padding: 1.4rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: var(--shadow-sm);
+}
+
+.review-card blockquote {
+  margin: 0 0 0.75rem;
+}
+
+.review-card figcaption {
+  font-weight: 700;
+}
+
+.review-card figcaption span {
+  font-weight: 400;
+}
+
+.faq-more {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.coverage-link-grid.town-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .callout-block p {
@@ -1366,90 +1307,6 @@ p {
   box-shadow: 0 10px 20px rgba(207, 93, 31, 0.28);
 }
 
-.promise-grid {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 2.5rem;
-  align-items: center;
-  background: linear-gradient(135deg, var(--ink), #2b2016);
-  border-radius: var(--radius);
-  padding: clamp(2rem, 5vw, 3.5rem);
-  color: #fff;
-}
-
-.promise-copy .eyebrow {
-  color: #ffd5ac;
-}
-
-.promise-copy h2 {
-  color: #fff;
-}
-
-.promise-copy > p {
-  color: rgba(255, 255, 255, 0.78);
-}
-
-.promise-points {
-  display: grid;
-  gap: 1rem;
-  margin-top: 1.5rem;
-}
-
-.promise-card {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 14px;
-  padding: 1.1rem 1.3rem;
-}
-
-.promise-card h3 {
-  color: #fff;
-  margin-bottom: 0.35rem;
-  font-size: 1.05rem;
-}
-
-.promise-card p {
-  color: rgba(255, 255, 255, 0.72);
-  margin: 0;
-}
-
-.promise-side {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.promise-quote {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 14px;
-  padding: 1.5rem;
-}
-
-.promise-quote p {
-  font-size: 1.15rem;
-  font-style: italic;
-  color: #fff;
-  margin: 0 0 0.6rem;
-}
-
-.promise-quote span {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
-}
-
-.promise-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-@media (max-width: 860px) {
-  .promise-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .breadcrumbs {
   padding: 1rem 0 0;
 }
@@ -1554,7 +1411,7 @@ p {
 
 .credential-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
 }
 
@@ -1605,21 +1462,6 @@ a.credential:focus-visible {
 }
 
 /* The reviews badge is the clickable one: glowing ring + arrow signal it */
-.credential--reviews {
-  border-color: var(--brand);
-  animation: review-glow 2.4s ease-out infinite;
-}
-
-.credential--reviews .credential-link {
-  color: var(--brand-deep);
-  font-weight: 700;
-}
-
-.credential--reviews:hover,
-.credential--reviews:focus-visible {
-  transform: translateY(-2px);
-  transition: transform 0.2s ease;
-}
 
 @keyframes review-glow {
   0% {
@@ -1630,13 +1472,6 @@ a.credential:focus-visible {
   }
   100% {
     box-shadow: 0 0 0 0 rgba(207, 93, 31, 0), 0 0 18px rgba(207, 93, 31, 0.35), var(--shadow-sm);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .credential--reviews {
-    animation: none;
-    box-shadow: 0 0 0 3px rgba(207, 93, 31, 0.35), 0 0 18px rgba(207, 93, 31, 0.35), var(--shadow-sm);
   }
 }
 
@@ -1653,6 +1488,10 @@ a.credential:focus-visible {
   .credential-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.6rem;
+  }
+
+  .credential:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
   }
 
   .credential {
@@ -1868,10 +1707,6 @@ fieldd-lead-form {
     display: none;
   }
 
-  .trust-grid {
-    grid-template-columns: 1fr;
-  }
-
   .about-grid {
     grid-template-columns: 1fr;
   }
@@ -1998,7 +1833,6 @@ fieldd-lead-form {
   }
 }
 
-
 /* Breathing room when a section heading follows a card grid (service pages) */
 .card-grid + .section-heading {
   margin-top: 2.5rem;
@@ -2015,8 +1849,37 @@ fieldd-lead-form {
 }
 
 /* Service Area label on the homepage is a real h2; keep the label's size */
-.trust-item .trust-item-title {
-  font-size: 1rem;
-  line-height: 1.4;
-  margin: 0 0 0.25rem;
+
+/* Homepage on phones: tighter spacing so the page stays short */
+@media (max-width: 860px) {
+  .home .section {
+    padding: 1.9rem 0;
+  }
+
+  .home .section-heading {
+    margin-bottom: 1.1rem;
+  }
+
+  .home .process-grid {
+    gap: 0.75rem;
+  }
+
+  .home .process-step {
+    padding: 1rem 1rem 1rem 4.1rem;
+  }
+
+  .home .process-number {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+    margin: 0;
+  }
+
+  .home .process-step h3 {
+    margin-top: 0;
+  }
+
+  .home .process-step p {
+    margin-bottom: 0;
+  }
 }

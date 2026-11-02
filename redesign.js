@@ -345,7 +345,7 @@
       });
     }, { threshold: 0.14, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.service-card, .faq-item, .process-step, .seo-card, .trust-item, .hub-tile').forEach((element) => {
+    document.querySelectorAll('.service-card, .faq-item, .process-step, .seo-card').forEach((element) => {
       element.classList.add('reveal-item');
       observer.observe(element);
     });

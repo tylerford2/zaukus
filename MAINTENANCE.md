@@ -2,6 +2,12 @@
 
 This is a static HTML site — nothing here updates itself except where noted. This list is **event-triggered**: leave it alone until the real-world fact actually changes, then paste the relevant section to Claude Code with what changed.
 
+## Revisit periodically
+
+### Google review count and rating (currently 5.0 from 24 reviews)
+- **What it touches**: visible text only, on `index.html` (hero rating line and the "Rated 5.0 from 24 Google reviews" heading). There is deliberately NO `aggregateRating` schema: Google doesn't show review stars for a business rating itself and forbids marking up reviews copied from another site.
+- **Tell Claude Code**: the new rating and count from your Google Business Profile.
+
 ## Update only if this actually changes
 
 ### Business contact info (phone, email, address)
@@ -25,8 +31,13 @@ This is a static HTML site — nothing here updates itself except where noted. T
 - **Tell Claude Code**: which city to add or remove.
 
 ### Ceramic coating / paint correction / detailing tiers
-- **Policy (2026-11-01)**: ceramic coating tiers (names, durations, differences) are consultation-only and are NOT listed anywhere on the site. No prices or dollar amounts anywhere either (the schema `priceRange` was removed too); pricing questions go to the Fieldd booking portal or a call.
+- **Policy (2026-11-01)**: ceramic coating tiers (names, durations, differences) are consultation-only and are NOT listed anywhere on the site. Paint correction and ceramic coating show "Custom quote after a free paint check", never a dollar amount.
 - **What it touches**: `services-ceramic-coating.html`, `services-paint-correction.html`, `services-detailing.html`, and the matching FAQ answers in `faq.html` and the condensed FAQ on `index.html`.
+
+### Detailing prices (starting prices, must match Fieldd)
+- **Current (2026-11-01, matches Fieldd)**: Full Detail $229 / $269 / $319, Interior Detail $159 / $179 / $219, Exterior Wash & Protection $119 / $139 / $159 (Sedan / SUV 5-Seat / SUV 7-Seat or Truck). Van / Fleet is quote-only. Maintenance Full Detail $199 / $239 / $289 ($30 off, rebooked within 60 days).
+- **What it touches**: the price table, per-size lines, and `offers` schema on `services-detailing.html`; the price list on `services.html` and `index.html`; the FAQ "What services do you offer?" answer in `faq.html` (visible text AND FAQPage schema); one price sentence on each of the 14 `location-*.html` pages (each worded differently on purpose, so edit each by hand); `maintenance-plan.html` (table + `offers` schema) and the maintenance callout on `index.html`; the meta descriptions of `services.html` and `maintenance-plan.html` (they mention $229 and $199).
+- **Tell Claude Code**: the new prices, and change them in Fieldd first.
 - **Tell Claude Code**: what specifically changed about a package (name, included prep), keeping the policy above in mind.
 
 ### Social media links
