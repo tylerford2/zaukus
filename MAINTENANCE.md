@@ -35,6 +35,7 @@ This is a static HTML site — nothing here updates itself except where noted. T
 
 ### Terms of Service / policies (cancellation window, deposits, weather policy, etc.)
 - **What it touches**: the visible Terms & Conditions section in `faq.html` AND the `FAQPage` JSON-LD block in the same file — these two must be updated together or they'll drift out of sync again.
+- **Also (since 2026-11-01)**: the Privacy Policy and Terms are copied word for word into `privacy.html` and `terms.html` (the footer links there). Change the text in all places. The `faq.html#privacy` section must stay where it is: Facebook ads link to it.
 - **Tell Claude Code**: the specific policy that changed.
 
 ### Sitemap
