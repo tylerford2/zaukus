@@ -214,14 +214,25 @@
   new Carousel('.gallery-carousel');
 
   // GA4 events: call_click, book_click, form_submit.
+  // The same actions go to the Meta Pixel: Contact, BookClick (custom), Lead.
+  const metaEvents = {
+    call_click: ['track', 'Contact'],
+    book_click: ['trackCustom', 'BookClick'],
+    form_submit: ['track', 'Lead'],
+  };
+
   const trackEvent = (name, element) => {
-    if (typeof window.gtag !== 'function') return;
     let location = 'page';
     if (element.closest('.mobile-action-bar')) location = 'sticky_bar';
     else if (element.closest('.hero')) location = 'hero';
     else if (element.closest('.site-header')) location = 'header';
     else if (element.closest('.site-footer')) location = 'footer';
-    window.gtag('event', name, { link_location: location, page_path: window.location.pathname });
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', name, { link_location: location, page_path: window.location.pathname });
+    }
+    if (typeof window.fbq === 'function' && metaEvents[name]) {
+      window.fbq(metaEvents[name][0], metaEvents[name][1]);
+    }
   };
 
   const BOOKING_URL = 'https://zaukusmobiledetailing.fieldd.co';
