@@ -1889,3 +1889,10 @@ fieldd-lead-form {
   margin-top: 1.5rem;
   align-items: start;
 }
+
+.review-stars {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--brand);
+  letter-spacing: 0.08em;
+}

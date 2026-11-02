@@ -5,7 +5,7 @@ This is a static HTML site — nothing here updates itself except where noted. T
 ## Revisit periodically
 
 ### Google review count and rating (currently 5.0 from 24 reviews)
-- **What it touches**: visible text only, on `index.html` (hero rating line and the "Rated 5.0 from 24 Google reviews" heading). There is deliberately NO `aggregateRating` schema: Google doesn't show review stars for a business rating itself and forbids marking up reviews copied from another site.
+- **What it touches**: visible text only, on `index.html` (hero rating line and the "Rated 5.0 from 24 Google reviews" heading) and the intro line on `reviews.html`. The quoted review cards (8 on `reviews.html`, 3 of them repeated on `index.html`) are excerpts copied word for word from Google: first name plus the car only if the customer named it. Never edit a customer's words or add a review that isn't on Google. There is deliberately NO `aggregateRating` schema: Google doesn't show review stars for a business rating itself and forbids marking up reviews copied from another site.
 - **Tell Claude Code**: the new rating and count from your Google Business Profile.
 
 ## Update only if this actually changes
